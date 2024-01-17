@@ -203,3 +203,77 @@ export const projects = [
         text: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores aperiam porro impedit tenetur quo hic omnis doloribus dolores enim deleniti.',
     },
 ];
+
+export const toolbelt = [
+    {
+        id: nanoid(),
+        title: 'Programming Languages',
+        items: ['HTML', 'CSS', 'JavaScript', 'TypeScript'],
+    },
+    {
+        id: nanoid(),
+        title: 'Front-End Libraries & Frameworks',
+        items: [
+            'React',
+            'jQuery',
+            'Angular',
+            'Bootstrap',
+            'Angular Material',
+            'TailwindCSS',
+            'SASS',
+        ],
+    },
+    {
+        id: nanoid(),
+        title: 'Back-End & Libraries',
+        items: [
+            'Node.js',
+            'Express',
+            'CORS',
+            'Axios',
+            'Vite',
+            'Parcel',
+            'Morgan',
+        ],
+    },
+    {
+        id: nanoid(),
+        title: 'Web Services & Database',
+        items: [
+            'MongoDB',
+            'Mongoose',
+            'PostgreSQL',
+            'Firebase',
+            'AWS Lambda',
+            'Github',
+            'Netlify',
+            'OnRender',
+        ],
+    },
+    {
+        id: nanoid(),
+        title: 'Mobile Apps',
+        items: ['React Native', 'Android Studio', 'PWA', 'Expo'],
+    },
+    {
+        id: nanoid(),
+        title: 'Testing',
+        items: ['Jest', 'Cucumber', 'Puppeteer', 'Postman'],
+    },
+
+    {
+        id: nanoid(),
+        title: 'Design',
+        items: ['Adobe Photoshop', 'Adobe Illustrator', 'Inkscape', 'Figma'],
+    },
+    {
+        id: nanoid(),
+        title: 'Version Control',
+        items: ['Git', 'Github'],
+    },
+    {
+        id: nanoid(),
+        title: 'Tools',
+        items: ['VSCode', 'Trello', 'Android Studio'],
+    },
+];
