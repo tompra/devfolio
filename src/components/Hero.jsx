@@ -2,7 +2,7 @@ import { FaGithubSquare, FaLinkedin, FaTwitterSquare } from 'react-icons/fa';
 const Hero = () => {
     return (
         <div className=' bg-emerald-200'>
-            <div className='mx-auto max-w-7xl px-8 grid md:grid-cols-2 items center gap-8 relative'>
+            <div className='align-element grid md:grid-cols-2 items center gap-8 relative'>
                 <article>
                     <h1 className='text-2xl'>Hi there,</h1>
                     <h1 className=' text-3xl'>

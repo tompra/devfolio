@@ -4,7 +4,7 @@ import { links } from '../data';
 const Navbar = () => {
     return (
         <nav className='bg-gradient-to-r from-cyan-500 to-teal-500 py-10'>
-            <div className='mx-auto max-w-7xl px-8 py-4 flex flex-col sm:flex-row sm:gap-x-16 sm:items-center sm:py-8'>
+            <div className='align-element py-4 flex flex-col sm:flex-row sm:gap-x-16 sm:items-center sm:py-8'>
                 <h1 className='text-xl text-white inline-block sm:mb-4 sm:mr-8'>
                     TP
                 </h1>
