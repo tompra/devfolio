@@ -12,6 +12,7 @@ import {
     FaBootstrap,
     FaTrello,
     FaAngular,
+    FaTwitter,
 } from 'react-icons/fa';
 import {
     SiExpress,
@@ -29,6 +30,7 @@ import {
     SiInkscape,
     SiFirebase,
     SiAwslambda,
+    SiGmail,
 } from 'react-icons/si';
 import pokedexImage from './assets/proyects/pokedex.png';
 import popcornhubImage from './assets/proyects/popcornhub.png';
@@ -349,5 +351,19 @@ export const toolbelt = [
         id: nanoid(),
         title: 'Tools',
         items: ['VSCode', 'Trello', 'Android Studio'],
+    },
+];
+export const connectLogos = [
+    {
+        id: nanoid(),
+        logo: <FaGithub />,
+    },
+    {
+        id: nanoid(),
+        logo: <FaTwitter />,
+    },
+    {
+        id: nanoid(),
+        logo: <SiGmail />,
     },
 ];
