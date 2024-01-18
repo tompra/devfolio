@@ -9,7 +9,7 @@ const Toolbelt = () => {
                     return (
                         <div
                             key={id}
-                            className='w-full md:w-1/2 lg:w-1/4 px-4 mb-8 lg:px-2 lg:mb-0'
+                            className='w-full md:w-1/2 lg:w-1/4 px-4 mb-8 lg:px-2 lg:mb-0 transform hover:translate-y-2 hover:shadow-xl transition duration-300'
                         >
                             <div className='rounded-lg  bg-purple-700'>
                                 <div className='border-b-2 bg-white rounded-t-lg'>
