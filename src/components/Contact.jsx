@@ -1,3 +1,4 @@
+import Map from './Map';
 const Contact = () => {
     return (
         <section className='align-element  bg-amber-500'>
@@ -92,6 +93,9 @@ const Contact = () => {
                     </div>
                 </div>
             </form>
+            <div className=' bg-pink-400'>
+                <Map />
+            </div>
         </section>
     );
 };
