@@ -2,11 +2,10 @@ import { projects } from '../data';
 
 const Projects = () => {
     return (
-        <section className=' bg-pink-600 align-element '>
+        <section className=' bg-pink-600 align-element' id='projects'>
             <h1 className='text-3xl'>Proyects</h1>
             {projects.map((project) => {
                 const { id, img, url, github, title, text, tools } = project;
-
                 const toolList =
                     tools &&
                     tools.map((tool, index) => {

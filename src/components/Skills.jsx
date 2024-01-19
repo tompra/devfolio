@@ -3,7 +3,7 @@ import Toolbelt from './Toolbelt';
 
 const Skills = () => {
     return (
-        <section className=' bg-indigo-200 align-element py-5'>
+        <section className=' bg-indigo-200 align-element py-5' id='skills'>
             <h1 className='text-3xl'>Skills</h1>
             <p className='py-5'>
                 I possess the ability to create websites and applications,

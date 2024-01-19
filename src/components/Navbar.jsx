@@ -1,24 +1,26 @@
 import { BsFillMoonStarsFill } from 'react-icons/bs';
 import { links } from '../data';
+import Logo from '../assets/logo/tp-short-logo.svg';
 
 const Navbar = () => {
     return (
-        <nav className='align-element bg-gradient-to-r from-cyan-500 to-teal-500 py-10'>
-            <div className='align-element py-4 flex flex-col sm:flex-row sm:gap-x-16 sm:items-center sm:py-8'>
-                <h1 className='text-xl text-white inline-block sm:mb-4 sm:mr-8'>
-                    TP
-                </h1>
-                <ul className='flex flex-col sm:flex-row sm:gap-x-3'>
+        <nav className='align-element py-6 md:py-10 bg-white'>
+            <div className='flex flex-col md:flex-row gap-4 md:gap-x-16 items-center justify-between'>
+                <img
+                    src={Logo}
+                    alt='Logo with my name'
+                    className=' h-20 md:h-30'
+                />
+                <ul className='flex  md:flex-row gap-4 md:gap-x-3 justify-center md:justify-end items-center'>
                     {links.map((link) => {
                         const { id, href, text } = link;
                         return (
-                            <li key={id}>
+                            <li key={id} className='relative-group'>
                                 <a
-                                    key={id}
                                     href={href}
-                                    className='capitalize text-lg tracking-wider hover:text-white duration-300'
+                                    className='capitalize text-lg tracking-wider relative w-fit block after:block after:content-[""] after:absolute after:h-[3px] after:bg-sky-500 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left hover:text-sky-500'
                                 >
-                                    {text}
+                                    <span>{text}</span>
                                 </a>
                             </li>
                         );

@@ -1,7 +1,7 @@
 import Map from './Map';
 const Contact = () => {
     return (
-        <section className='align-element  bg-amber-500'>
+        <section className='align-element  bg-amber-500' id='contact'>
             <h1 className='text-3xl text-cyan-400'>Drop me a message</h1>
             <p className='my-2'>
                 I&apos;m interested in ew opportunities - especially in large
