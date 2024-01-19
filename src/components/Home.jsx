@@ -23,7 +23,7 @@ const Home = () => {
                         href='https://github.com/tompra'
                         className='hover:opacity-80'
                     >
-                        <FaGithubSquare className='h-10 w-10 text-slate-600 hover:text-sky-500 duration-300' />
+                        <FaGithubSquare className='h-10 w-10 text-slate-600 hover:text-sky-500' />
                     </a>
                     <a
                         href='www.linkedin.com/in/thom-prayon'
@@ -40,7 +40,7 @@ const Home = () => {
                 </div>
             </article>
             <article className='flex justify-center'>
-                <div className='relative w-80 h-80 overflow-hidden rounded-full border-4 border-sky-500 shadow-[0_3px_10px_rgb(0,0,0,0.5)] hover:border-sky-400 transform  hover:shadow-xl transition duration-300 '>
+                <div className='relative w-full max-w-[80vw] h-80 max-h-[80vw] overflow-hidden rounded-full border-4 border-sky-500 shadow-[0_3px_10px_rgb(0,0,0,0.5)] hover:border-sky-400 transform  hover:shadow-xl transition duration-300 '>
                     <img
                         src={Img1}
                         alt='Photo of myself'

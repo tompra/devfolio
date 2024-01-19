@@ -3,7 +3,7 @@ import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 const Map = () => {
     const position = [52.52, 13.405];
     return (
-        <div className='align-element h-96 md:h-screen'>
+        <div className='align-element relative w-full h-96 md:h-full max-h-96 md:max-h-full md:w-96 mx-auto'>
             <MapContainer
                 center={position}
                 zoom={13}
@@ -15,10 +15,11 @@ const Map = () => {
                     url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
                 />
                 <Marker position={position}>
-                    <Popup>Looking for a new opportunities</Popup>
+                    <Popup>Looking for new opportunities</Popup>
                 </Marker>
             </MapContainer>
         </div>
     );
 };
+
 export default Map;

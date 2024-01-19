@@ -360,14 +360,18 @@ export const toolbelt = [
 export const connectLogos = [
     {
         id: nanoid(),
-        logo: <FaGithub />,
+        logo: (
+            <FaGithub className='h-8 w-8 text-slate-600 hover:text-sky-500' />
+        ),
     },
     {
         id: nanoid(),
-        logo: <FaTwitter />,
+        logo: (
+            <FaTwitter className='h-8 w-8 text-slate-600 hover:text-sky-500' />
+        ),
     },
     {
         id: nanoid(),
-        logo: <SiGmail />,
+        logo: <SiGmail className='h-8 w-8 text-slate-600 hover:text-sky-500' />,
     },
 ];

@@ -20,7 +20,7 @@ const About = () => {
                         knowledge.
                     </p>
                 </div>
-                <div className='relative w-80 h-80 overflow-hidden rounded-xl shadow-[0_3px_10px_rgb(0,0,0,0.5)] mx-auto'>
+                <div className='relative w-full max-w-[80vw] h-80 max-h-[80vw] overflow-hidden rounded-xl shadow-[0_3px_10px_rgb(0,0,0,0.5)] mx-auto'>
                     <img
                         src={Img2}
                         alt='Me climbing a boulder'

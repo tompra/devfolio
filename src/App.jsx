@@ -8,7 +8,7 @@ import Footer from './components/Footer';
 
 const App = () => {
     return (
-        <div className='min-h-screen px-10'>
+        <div className='min-h-screen sm:px-10 md:px-10 lg-px-10 '>
             <Navbar />
             <Home />
             <About />
