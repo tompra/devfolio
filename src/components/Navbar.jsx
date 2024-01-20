@@ -30,9 +30,7 @@ const Navbar = () => {
                 </div>
                 <ul
                     className={`sm:flex-row :xs:flex xs:flex-col xs:justify-center xs:items-center xs:pl-0 md:flex md:items-center md:pb-0 pb-8 absolute md:static bg-white md:z-auto md:px-10 left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in-out ${
-                        isOpen
-                            ? 'top-18 z-10 border-b-2 border-slate-200'
-                            : 'top-[-490px]'
+                        isOpen ? 'top-18 z-10' : 'top-[-490px]'
                     }`}
                 >
                     {links.map((link) => {
@@ -40,7 +38,7 @@ const Navbar = () => {
                         return (
                             <li
                                 key={id}
-                                className='md:ml-8 md:my-0 my-6 font-semibold'
+                                className='md:ml-8 md:my-0 my-6 font-semibold xs:pl-10 md:pl-0'
                                 onClick={handleClickOnItem}
                             >
                                 <a
@@ -52,7 +50,7 @@ const Navbar = () => {
                             </li>
                         );
                     })}
-                    <li className='md:ml-5'>
+                    <li className='md:ml-5 xs:pl-10 md:pl-0'>
                         <BsFillMoonStarsFill className='cursor-pointer text-2xl' />
                     </li>
                 </ul>
