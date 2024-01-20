@@ -264,6 +264,15 @@ export const projects = [
     },
     {
         id: nanoid(),
+        img: filmifyImage,
+        url: 'https://tompra.github.io/filmify/welcome',
+        github: 'https://github.com/tompra/filmify',
+        title: 'Filmify',
+        text: 'Build the client-side for an Angular application based on its existing server-side code (REST API and database) with supporting documentation.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores aperiam porro impedit tenetur quo hic omnis doloribus dolores enim deleniti.',
+        tools: ['Angular', 'TypeScript', 'Angular-Material', 'SASS', 'TypeDoc'],
+    },
+    {
+        id: nanoid(),
         img: chatAppImage,
         url: '',
         github: 'https://github.com/tompra/chat_app',
@@ -277,15 +286,6 @@ export const projects = [
             'Expo',
             'Gifted Chat',
         ],
-    },
-    {
-        id: nanoid(),
-        img: filmifyImage,
-        url: 'https://tompra.github.io/filmify/welcome',
-        github: 'https://github.com/tompra/filmify',
-        title: 'Filmify',
-        text: 'Build the client-side for an Angular application based on its existing server-side code (REST API and database) with supporting documentation.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores aperiam porro impedit tenetur quo hic omnis doloribus dolores enim deleniti.',
-        tools: ['Angular', 'TypeScript', 'Angular-Material', 'SASS', 'TypeDoc'],
     },
 ];
 
@@ -361,17 +361,19 @@ export const connectLogos = [
     {
         id: nanoid(),
         logo: (
-            <FaGithub className='h-8 w-8 text-slate-600 hover:text-sky-500' />
+            <FaGithub className='xs:h-5 xs:w-5 sm:h-8 sm:w-8 text-slate-600 hover:text-sky-500' />
         ),
     },
     {
         id: nanoid(),
         logo: (
-            <FaTwitter className='h-8 w-8 text-slate-600 hover:text-sky-500' />
+            <FaTwitter className='xs:h-5 xs:w-5 sm:h-8 sm:w-8 text-slate-600 hover:text-sky-500' />
         ),
     },
     {
         id: nanoid(),
-        logo: <SiGmail className='h-8 w-8 text-slate-600 hover:text-sky-500' />,
+        logo: (
+            <SiGmail className='xs:h-5 xs:w-5 sm:h-8 sm:w-8 text-slate-600 hover:text-sky-500' />
+        ),
     },
 ];

@@ -10,7 +10,7 @@ const Contact = () => {
                     Drop me a message
                 </h1>
                 <p className='my-5'>
-                    I&apos;m interested in ew opportunities - especially in
+                    I&apos;m interested in new opportunities - especially in
                     large projects. If you have a question or a request, just
                     contact me using the form below.{' '}
                 </p>
@@ -45,7 +45,7 @@ const Contact = () => {
                     </div>
                 </form>
             </div>
-            <div className='bg-sky-700 py-3'>
+            <div className='bg-sky-700 py-3 xs:px-5 sm:px-5 md:px-0 rounded'>
                 <Map />
             </div>
         </section>
