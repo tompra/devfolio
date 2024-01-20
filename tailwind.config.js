@@ -12,6 +12,9 @@ export default {
                     '100%': { transform: 'translateX(-100%)' },
                 },
             },
+            screens: {
+                xs: '320px',
+            },
         },
     },
     plugins: [],
