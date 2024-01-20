@@ -5,11 +5,14 @@ import About from './components/About';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import { useState } from 'react';
 
 const App = () => {
+    const [darkMode, setDarkMode] = useState(false);
+
     return (
-        <div className='min-h-screen'>
-            <Navbar />
+        <div className={`min-h-scren ${darkMode ? 'dark' : ''}`}>
+            <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
             <Home />
             <About />
             <Skills />
