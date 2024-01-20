@@ -1,36 +1,58 @@
 import { BsFillMoonStarsFill } from 'react-icons/bs';
 import { links } from '../data';
 import Logo from '../assets/logo/tp-short-logo.svg';
+import { HiMenuAlt1 } from 'react-icons/hi';
+import { IoCloseSharp } from 'react-icons/io5';
+import { useState } from 'react';
 
 const Navbar = () => {
+    let [isOpen, setIsOpen] = useState(false);
+
+    const handleClickOnItem = () => {
+        setIsOpen(false);
+    };
+
     return (
-        <nav className='align-element py-6 md:py-10 bg-white'>
-            <div className='flex flex-col md:flex-row gap-4 md:gap-x-16 items-center justify-between'>
-                <img
-                    src={Logo}
-                    alt='Logo with my name'
-                    className='h-20 md:h-30 float-left sm:float-none'
-                />
-                <ul className='flex md:flex-row gap-4 md:gap-x-3 justify-center md:justify-end items-center md:flex-grow relative'>
+        <nav className='shadow-md align-element'>
+            <div className='md:flex items-center justify-between bg-white py-4 '>
+                <div className='font-bold text-2xl cursor-pointer flex items-center gap-1'>
+                    <img src={Logo} className='h-20 md:h-30' />{' '}
+                </div>
+                <div
+                    onClick={() => setIsOpen(!isOpen)}
+                    className='absolute right-10 top-10 cursor-pointer md:hidden w-7 h-7'
+                >
+                    {isOpen ? (
+                        <IoCloseSharp className='h-7 w-7' />
+                    ) : (
+                        <HiMenuAlt1 className='h-7 w-7' />
+                    )}
+                </div>
+                <ul
+                    className={`sm:flex-row :xs:flex xs:flex-col xs:justify-center xs:items-center xs:pl-0 md:flex md:items-center md:pb-0 pb-8 absolute md:static bg-white md:z-auto md:px-10 left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in-out ${
+                        isOpen
+                            ? 'top-18 z-10 border-b-2 border-slate-200'
+                            : 'top-[-490px]'
+                    }`}
+                >
                     {links.map((link) => {
                         const { id, href, text } = link;
                         return (
                             <li
                                 key={id}
-                                className='relative-group md:mb-0 mb-3 '
+                                className='md:ml-8 md:my-0 my-6 font-semibold'
+                                onClick={handleClickOnItem}
                             >
                                 <a
                                     href={href}
                                     className='capitalize text-lg tracking-wider relative w-fit block after:block after:content-[""] after:absolute after:h-[3px] after:bg-sky-500 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left hover:text-sky-500'
                                 >
-                                    <span className='text-xs sm:text-base'>
-                                        {text}
-                                    </span>
+                                    <span>{text}</span>
                                 </a>
                             </li>
                         );
                     })}
-                    <li className='md:ml-auto hidden sm:inline-block'>
+                    <li className='md:ml-5'>
                         <BsFillMoonStarsFill className='cursor-pointer text-2xl' />
                     </li>
                 </ul>

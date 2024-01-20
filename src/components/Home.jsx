@@ -40,7 +40,7 @@ const Home = () => {
                 </div>
             </article>
             <article className='flex justify-center'>
-                <div className='relative w-full max-w-[80vw] h-80 max-h-[80vw] overflow-hidden rounded-full border-4 border-sky-500 shadow-[0_3px_10px_rgb(0,0,0,0.5)] hover:border-sky-400 transform  hover:shadow-xl transition duration-300 '>
+                <div className='w-full  h-80  overflow-hidden rounded-full border-4 border-sky-500 shadow-[0_3px_10px_rgb(0,0,0,0.5)] hover:border-sky-400 transform  hover:shadow-xl transition duration-300 '>
                     <img
                         src={Img1}
                         alt='Photo of myself'
