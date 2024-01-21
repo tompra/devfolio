@@ -283,8 +283,8 @@ export const projects = [
             'React Native',
             'Android Studio',
             'Google Firebase',
-            'Expo',
             'Gifted Chat',
+            'Expo',
         ],
     },
 ];

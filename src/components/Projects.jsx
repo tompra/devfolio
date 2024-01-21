@@ -19,7 +19,7 @@ const Projects = () => {
                             return (
                                 <span
                                     key={index}
-                                    className='relative inline-flex items-center justify-center p-2 mb-2 me-2 overflow-hidden xs:text-xs md:text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 mr-3'
+                                    className='relative inline-flex items-center justify-center p-2 mb-2 me-2 overflow-hidden xs:text-xs md:text-sm font-medium text-slate-100 rounded-lg group bg-gradient-to-br from-purple-600 to-sky-600 group-hover:from-purple-600 group-hover:to-sky-600 hover:text-slate-300 dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 mr-3 '
                                 >
                                     {tool}
                                 </span>
