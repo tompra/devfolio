@@ -1,26 +1,36 @@
 import { FaGithubSquare, FaLinkedin, FaTwitterSquare } from 'react-icons/fa';
 import Img1 from '../assets/photos/portrait-picture.jpeg';
 const Home = () => {
+    const nameArr = ['T', 'h', 'o', 'm', 'a', 's'];
     return (
         <section
             className='bg-sky-600 dark:bg-gray-700 align-element grid md:grid-cols-2 items-center gap-8 border-b-2 border-gray-400 dark:border-gray-500 py-16'
             id='home'
         >
-            <article className=' xs:py-8 mt-5 flex flex-col justify-center sm:ml-10 dark:text-white'>
-                <h1 className='text-2xl xs:text-center sm:text-start '>
+            <article className='xs:py-8 mt-5 flex flex-col sm:ml-10 dark:text-white'>
+                <h1 className='text-2xl xs:text-center sm:text-start my-2'>
                     Hello there👋 ,
                 </h1>
-                <h1 className='text-3xl xs:text-center sm:text-start'>
+                <h1 className='text-3xl xs:text-center sm:text-start '>
                     I&apos;m{' '}
                     <span className=' text-violet-300 dark:text-sky-500 font-extrabold text-4xl'>
-                        Thomas
+                        {nameArr.map((letter, index) => {
+                            return (
+                                <span
+                                    key={index}
+                                    className='inline-block tracking-widest transform hover:scale-125 origin-bottom transition-transform duration-300'
+                                >
+                                    {letter}
+                                </span>
+                            );
+                        })}
                     </span>
                     , a web developer.
                 </h1>
                 <p className='capitalize xs:text-center sm:text-start'>
                     scaling heights in code and on rocks
                 </p>
-                <div className='flex gap-x-4 mt-4 items-center xs:flex xs:justify-center sm:justify-start '>
+                <div className='flex gap-x-4 mt-5 items-center xs:flex xs:justify-center sm:justify-start'>
                     <a
                         href='https://github.com/tompra'
                         className='hover:opacity-80'
