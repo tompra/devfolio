@@ -11,7 +11,11 @@ const App = () => {
     const [darkMode, setDarkMode] = useState(false);
 
     return (
-        <div className={`min-h-scren ${darkMode ? 'dark' : ''}`}>
+        <div
+            className={`min-h-screen ${darkMode ? 'dark' : ''} ${
+                darkMode ? 'bg-slate-800' : ''
+            }`}
+        >
             <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
             <Home />
             <About />

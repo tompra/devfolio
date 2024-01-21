@@ -2,10 +2,10 @@ import Map from './Map';
 const Contact = () => {
     return (
         <section
-            className='bg-slate-200 align-element py-16 grid grid-cols-1 md:grid-cols-2'
+            className='bg-slate-200 dark:bg-gray-700 align-element py-16 grid grid-cols-1 md:grid-cols-2'
             id='contact'
         >
-            <div className='px-8'>
+            <div className='px-8 mx-auto dark:text-white'>
                 <h1 className='text-3xl font-bold text-center sm:text-start'>
                     Drop me a message
                 </h1>
@@ -38,7 +38,7 @@ const Contact = () => {
                     <div className='flex justify-center'>
                         <button
                             type='button'
-                            className='text-white bg-[#007bff] hover:bg-blue-600 font-semibold rounded-md text-sm px-4 py-2.5 w-24'
+                            className='text-white bg-sky-600 hover:bg-sky-700 font-semibold rounded-md text-sm px-4 py-2.5 w-24'
                         >
                             Send
                         </button>

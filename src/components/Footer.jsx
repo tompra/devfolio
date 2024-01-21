@@ -2,7 +2,7 @@ import { connectLogos } from '../data';
 
 const Footer = () => {
     return (
-        <footer className='bg-white align-element'>
+        <footer className='bg-white align-element py-6 dark:bg-gray-900 dark:text-white flex flex-col justify-around'>
             <h1 className='sm:text-3xl font-bold text-center xs:text-xl'>
                 Let&apos;s connect
             </h1>
@@ -13,7 +13,7 @@ const Footer = () => {
                         <div key={id}>
                             <button
                                 type='button'
-                                className='mx-5 border border-slate-700 hover:bg-sky-700 hover:text-white  font-medium rounded-full text-sm p-2.5 text-center inline-flex items-center  '
+                                className='mx-5 border border-slate-700 dark:border-slate-300 hover:bg-sky-700 hover:text-white  font-medium rounded-full text-sm p-2.5 text-center inline-flex items-center  '
                             >
                                 {logo}
                             </button>

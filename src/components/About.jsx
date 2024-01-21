@@ -2,10 +2,10 @@ import Img2 from '../assets/photos/climb.jpeg';
 const About = () => {
     return (
         <section
-            className='bg-white align-element py-16 border-b-2 border-gray-400 xs:py-12'
+            className='bg-white align-element py-16 border-b-2 border-gray-700 xs:py-12 dark:bg-gray-600'
             id='about'
         >
-            <div className='grid grid-cols-1 md:grid-cols-2 gap-3 xs:p-8'>
+            <div className='grid grid-cols-1 md:grid-cols-2 gap-3 xs:p-8 dark:text-white'>
                 <div className='md:order-2 xs:flex xs:flex-col xs:justify-center'>
                     <h1 className='text-3xl font-bold xs:text-center sm:text-start xs:mb-5 sm:mb-3'>
                         About me

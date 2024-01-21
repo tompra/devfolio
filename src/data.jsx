@@ -361,19 +361,19 @@ export const connectLogos = [
     {
         id: nanoid(),
         logo: (
-            <FaGithub className='xs:h-5 xs:w-5 sm:h-8 sm:w-8 text-slate-600 hover:text-sky-500' />
+            <FaGithub className='xs:h-5 xs:w-5 sm:h-8 sm:w-8 text-slate-600 hover:text-sky-500 dark:text-slate-200 dark:hover:text-sky-300' />
         ),
     },
     {
         id: nanoid(),
         logo: (
-            <FaTwitter className='xs:h-5 xs:w-5 sm:h-8 sm:w-8 text-slate-600 hover:text-sky-500' />
+            <FaTwitter className='xs:h-5 xs:w-5 sm:h-8 sm:w-8 text-slate-600 hover:text-sky-500 dark:text-slate-200 dark:hover:text-sky-300' />
         ),
     },
     {
         id: nanoid(),
         logo: (
-            <SiGmail className='xs:h-5 xs:w-5 sm:h-8 sm:w-8 text-slate-600 hover:text-sky-500' />
+            <SiGmail className='xs:h-5 xs:w-5 sm:h-8 sm:w-8 text-slate-600 hover:text-sky-500 dark:text-slate-200 dark:hover:text-sky-300' />
         ),
     },
 ];

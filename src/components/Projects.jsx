@@ -2,8 +2,11 @@ import { projects } from '../data';
 
 const Projects = () => {
     return (
-        <section className='bg-white align-element py-10' id='projects'>
-            <h1 className='text-3xl font-bold text-center sm:text-start xs:text-center sm:pl-5'>
+        <section
+            className='bg-white align-element py-10 dark:bg-gray-600'
+            id='projects'
+        >
+            <h1 className='text-3xl font-bold text-center sm:text-start xs:text-center sm:pl-5 dark:text-white'>
                 Projects
             </h1>
             <div className='grid grid-cols-1 md:grid-cols-2  xl:grid-cols-3 gap-8'>
@@ -26,7 +29,7 @@ const Projects = () => {
                     return (
                         <div
                             key={id}
-                            className='bg-gray-100 border border-gray-200 rounded-lg my-5 xs:shadow-[rgba(3,105,161)_0px_3px_8px] xs:mx-5  sm:shadow-[12px_12px_0px_0px_rgba(3,105,161)] transition-all duration-300 transform hover:shadow-[0px_0px_0px_0px_rgba(3,105,161)] hover:border-2 hover:border-sky-700'
+                            className='bg-gray-100 dark:bg-gray-800 dark:text-white border border-gray-200 rounded-lg my-5 xs:shadow-[rgba(3,105,161)_0px_3px_8px] xs:mx-5  sm:shadow-[12px_12px_0px_0px_rgba(3,105,161)] dark:sm:shadow-[12px_12px_0px_0px_rgba(56, 189, 233)]  transition-all duration-300 transform hover:shadow-[0px_0px_0px_0px_rgba(3,105,161)] hover:border-2 hover:border-sky-700'
                         >
                             <img
                                 className='rounded-t-lg w-full h-auto'
@@ -38,7 +41,7 @@ const Projects = () => {
                                 <h1 className='text-2xl my-3 font-bold'>
                                     {title}
                                 </h1>
-                                <div className='my-3'>{toolList}</div>
+                                <div className='my-5'>{toolList}</div>
                                 <p className='mb-3 font-normal text-gray-700 dark:text-gray-400'>
                                     {text}
                                 </p>
