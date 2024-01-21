@@ -5,7 +5,7 @@ const Contact = () => {
             className='bg-slate-200 dark:bg-gray-700 align-element py-16 grid grid-cols-1 md:grid-cols-2'
             id='contact'
         >
-            <div className='px-8 mx-auto dark:text-white'>
+            <div className='px-8 mx-auto max-w-lg dark:text-white'>
                 <h1 className='text-3xl font-bold text-center sm:text-start'>
                     Drop me a message
                 </h1>
@@ -14,24 +14,30 @@ const Contact = () => {
                     large projects. If you have a question or a request, just
                     contact me using the form below.{' '}
                 </p>
-                <form className='mx-auto max-w-md space-y-4 my-10'>
+                <form className='mx-auto space-y-4 my-10'>
                     <input
                         type='text'
                         placeholder='Name'
+                        name='Name'
+                        autoComplete='none'
                         className='w-full rounded-md py-2.5 px-4 border text-sm outline-[#007bff]'
                     />
                     <input
                         type='email'
+                        name='Email'
                         placeholder='Email'
+                        autoComplete='none'
                         className='w-full rounded-md py-2.5 px-4 border text-sm outline-[#007bff]'
                     />
                     <input
                         type='text'
+                        name='Subject'
                         placeholder='Subject'
                         className='w-full rounded-md py-2.5 px-4 border text-sm outline-[#007bff]'
                     />
                     <textarea
                         placeholder='Message'
+                        name='Message'
                         rows='6'
                         className='w-full rounded-md px-4 border text-sm pt-2.5 outline-[#007bff]'
                     ></textarea>
