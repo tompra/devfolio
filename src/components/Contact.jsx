@@ -1,5 +1,33 @@
 import Map from './Map';
+import { useRef } from 'react';
+import emailjs from '@emailjs/browser';
+import { PUBLIC_KEY, TEMPLATE_ID, SERVICE_ID } from '../../secrets.json';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 const Contact = () => {
+    const form = useRef();
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+        console.log('sending form');
+        console.log('form.current', form.current);
+
+        emailjs
+            .sendForm(SERVICE_ID, TEMPLATE_ID, form.current, PUBLIC_KEY)
+            .then(
+                (result) => {
+                    console.log('result', result);
+                    console.log('result.text', result.text);
+                    toast.success('Email sent successfully!');
+                },
+                (error) => {
+                    console.log(error.text);
+                    toast.error('Error sending email. Please try again!');
+                }
+            );
+    };
+
     return (
         <section
             className='bg-slate-200 dark:bg-gray-700 align-element py-16 grid grid-cols-1 md:grid-cols-2'
@@ -14,36 +42,47 @@ const Contact = () => {
                     large projects. If you have a question or a request, just
                     contact me using the form below.{' '}
                 </p>
-                <form className='mx-auto space-y-4 my-10'>
+                <form
+                    ref={form}
+                    className='mx-auto space-y-4 my-10'
+                    onSubmit={sendEmail}
+                >
                     <input
                         type='text'
+                        name='user_name'
                         placeholder='Name'
-                        name='Name'
                         autoComplete='none'
+                        id='name'
+                        required
                         className='w-full rounded-md py-2.5 px-4 border text-sm outline-[#007bff]'
                     />
                     <input
                         type='email'
-                        name='Email'
+                        name='user_email'
                         placeholder='Email'
                         autoComplete='none'
+                        id='email'
+                        required
                         className='w-full rounded-md py-2.5 px-4 border text-sm outline-[#007bff]'
                     />
                     <input
                         type='text'
-                        name='Subject'
+                        name='user_subject'
                         placeholder='Subject'
+                        id='subject'
                         className='w-full rounded-md py-2.5 px-4 border text-sm outline-[#007bff]'
                     />
                     <textarea
                         placeholder='Message'
-                        name='Message'
+                        name='user_message'
                         rows='6'
+                        id='email-body'
+                        required
                         className='w-full rounded-md px-4 border text-sm pt-2.5 outline-[#007bff]'
                     ></textarea>
                     <div className='flex justify-center'>
                         <button
-                            type='button'
+                            type='submit'
                             className='text-white bg-sky-600 hover:bg-sky-700 font-semibold rounded-md text-sm px-4 py-2.5 w-24'
                         >
                             Send
@@ -54,6 +93,16 @@ const Contact = () => {
             <div className='bg-sky-700 py-3 xs:px-5 sm:px-5 md:px-0 rounded'>
                 <Map />
             </div>
+            <ToastContainer
+                position='top-center'
+                autoClose={5000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+            />
         </section>
     );
 };
