@@ -14,7 +14,7 @@ const Home = () => {
                 </h1>
                 <h1 className='text-3xl xs:text-center sm:text-start'>
                     I&apos;m{' '}
-                    <span className=' text-violet-300 dark:text-sky-500 font-extrabold text-4xl'>
+                    <span className='text-red-300 dark:text-sky-500 font-extrabold text-4xl'>
                         {nameArr.map((letter, index) => {
                             return (
                                 <span
@@ -34,21 +34,21 @@ const Home = () => {
                 <div className='flex gap-x-4 mt-5 items-center xs:flex xs:justify-center sm:justify-start'>
                     <a
                         href='https://github.com/tompra'
-                        className='hover:opacity-80'
+                        className='hover:opacity-95'
                     >
-                        <FaGithubSquare className='h-10 w-10 text-slate-800 hover:text-sky-500 dark:text-sky-200' />
+                        <FaGithubSquare className='h-10 w-10 text-slate-800 hover:text-slate-600 dark:text-sky-200' />
                     </a>
                     <a
                         href='www.linkedin.com/in/thom-prayon'
                         className='hover:opacity-80'
                     >
-                        <FaLinkedin className='h-10 w-10 text-slate-800 hover:text-sky-500 duration-300 dark:text-sky-200' />
+                        <FaLinkedin className='h-10 w-10 text-slate-800 hover:text-slate-6000 duration-300 dark:text-sky-200' />
                     </a>
                     <a
                         href='https://twitter.com/TPrayon'
                         className='hover:opacity-80'
                     >
-                        <FaTwitterSquare className='h-10 w-10 text-slate-800 hover:text-sky-500 duration-300 dark:text-sky-200' />
+                        <FaTwitterSquare className='h-10 w-10 text-slate-800 hover:text-slate-600  dark:text-sky-200' />
                     </a>
                 </div>
             </article>

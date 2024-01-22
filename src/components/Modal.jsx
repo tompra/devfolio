@@ -5,8 +5,8 @@ const Modal = ({ toggleModal, content }) => {
     }
     return (
         <div className='fixed inset-0 bg-gray-800 bg-opacity-75 flex items-center justify-center '>
-            <div className='bg-white p-8 rounded-md relative w-full max-w-3xl h-full overflow-y-auto dark:bg-gray-600 dark:text-white'>
-                <div className='flex items-center justify-between py-4 md:py-5 border-b rounded-t dark:border-gray-600'>
+            <div className='bg-white rounded-md relative w-full max-w-3xl h-full overflow-y-auto dark:bg-gray-600 dark:text-white'>
+                <div className='flex items-center justify-between p-4 md:py-5 border-b rounded-t dark:border-gray-600'>
                     <h1 className='text-2xl font-bold'>{content.title}</h1>
                     <button
                         type='button'
@@ -31,14 +31,14 @@ const Modal = ({ toggleModal, content }) => {
                         <span class='sr-only'>Close modal</span>
                     </button>
                 </div>
-                <div>
+                <div className='p-4 mt-2'>
                     <img
                         src={content.img}
                         alt={content.title}
                         className='max-w-full'
                     />
                 </div>
-                <div className='pt-2'>
+                <div className='p-4'>
                     <p className='font-bold text-xl py-2'>Description</p>{' '}
                     <p className='mb-3 font-normal my-1'>
                         {content.description}
