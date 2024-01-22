@@ -5,10 +5,20 @@ import About from './components/About';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import Modal from './components/Modal';
 import { useState } from 'react';
 
 const App = () => {
     const [darkMode, setDarkMode] = useState(false);
+    const [isModalOpen, setModalOpen] = useState(false);
+    const [modalContent, setModalContent] = useState(null);
+
+    const toggleModal = (content) => {
+        console.log('modal is clicked');
+        console.log('content', content);
+        setModalContent(content);
+        setModalOpen(!isModalOpen);
+    };
 
     return (
         <div
@@ -20,9 +30,13 @@ const App = () => {
             <Home />
             <About />
             <Skills />
-            <Projects />
+            <Projects toggleModal={toggleModal} />
             <Contact />
             <Footer />
+
+            {isModalOpen && (
+                <Modal toggleModal={toggleModal} content={modalContent} />
+            )}
         </div>
     );
 };

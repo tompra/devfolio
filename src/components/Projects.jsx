@@ -1,6 +1,6 @@
 import { projects } from '../data';
 
-const Projects = () => {
+const Projects = ({ toggleModal }) => {
     return (
         <section
             className='bg-white align-element py-10 dark:bg-gray-600'
@@ -32,7 +32,7 @@ const Projects = () => {
                             className='bg-gray-100 dark:bg-gray-800 dark:text-white border border-gray-200 rounded-lg my-5 xs:shadow-[rgba(3,105,161)_0px_3px_8px] xs:mx-5  sm:shadow-[12px_12px_0px_0px_rgba(3,105,161)] dark:sm:shadow-[12px_12px_0px_0px_rgba(56, 189, 233)]  transition-all duration-300 transform hover:shadow-[0px_0px_0px_0px_rgba(3,105,161)] hover:border-2 hover:border-sky-700'
                         >
                             <img
-                                className='rounded-t-lg w-full h-auto'
+                                className='rounded-t-lg w-full h-auto object-cover'
                                 src={img}
                                 alt={title}
                             />
@@ -78,6 +78,15 @@ const Projects = () => {
                                                     </a>
                                                 </>
                                             )}
+                                        </span>
+                                    </button>
+                                    {/* MODAL */}
+                                    <button
+                                        onClick={() => toggleModal(project)}
+                                        className='relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800'
+                                    >
+                                        <span className='relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0'>
+                                            See more
                                         </span>
                                     </button>
                                 </div>

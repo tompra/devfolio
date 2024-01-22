@@ -25,7 +25,7 @@ const Navbar = ({ setDarkMode, darkMode }) => {
                 </div>
                 <div
                     onClick={() => setIsOpen(!isOpen)}
-                    className='absolute right-10  top-6 cursor-pointer md:hidden w-7 h-7 text-white dark:xs:text-white'
+                    className='absolute right-10  top-12 cursor-pointer md:hidden w-7 h-7 text-white dark:xs:text-white'
                 >
                     {isOpen ? (
                         <IoCloseSharp className='h-7 w-7' />
