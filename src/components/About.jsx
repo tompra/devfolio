@@ -1,4 +1,5 @@
 import Img2 from '../assets/photos/climb.jpeg';
+
 const About = () => {
     return (
         <section
