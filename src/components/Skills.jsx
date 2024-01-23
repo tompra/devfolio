@@ -1,10 +1,21 @@
 import Slider from './Slider';
 import Toolbelt from './Toolbelt';
+import { useInView } from 'react-intersection-observer';
 
-const Skills = () => {
+const Skills = ({ animateVisibility }) => {
+    const { ref, inView } = useInView({
+        triggerOnce: true,
+    });
+
+    const skillsAnimation = animateVisibility(
+        inView,
+        'animate-fade-down animate-once animate-duration-300 animate-delay-0 animate-ease-in'
+    );
+
     return (
         <section
-            className='bg-slate-200 align-element py-16 xs:py-12 xs:p-8 dark:bg-gray-800 dark:text-white'
+            ref={ref}
+            className={`bg-slate-200 align-element sm:py-20 xs:py-12 xs:p-8 dark:bg-gray-800 dark:text-white ${skillsAnimation}`}
             id='skills'
         >
             <h1 className='text-3xl font-bold text-center sm:text-start'>

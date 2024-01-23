@@ -4,9 +4,13 @@ import emailjs from '@emailjs/browser';
 import { PUBLIC_KEY, TEMPLATE_ID, SERVICE_ID } from '../../secrets.json';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { useInView } from 'react-intersection-observer';
 
-const Contact = () => {
+const Contact = ({ animateVisibility }) => {
     const form = useRef();
+    const { ref, inView } = useInView({
+        triggerOnce: true,
+    });
 
     const sendEmail = (e) => {
         e.preventDefault();
@@ -28,12 +32,25 @@ const Contact = () => {
             );
     };
 
+    const animateForm = animateVisibility(
+        inView,
+        'animate-fade-right animate-once animate-duration-[600ms] animate-delay-100 animate-ease-in'
+    );
+
+    const animateMap = animateVisibility(
+        inView,
+        'animate-fade-left animate-once animate-duration-[600ms] animate-delay-[800ms] animate-ease-in-out'
+    );
+
     return (
         <section
+            ref={ref}
             className='bg-slate-200 dark:bg-gray-700 align-element py-16 grid grid-cols-1 md:grid-cols-2'
             id='contact'
         >
-            <div className='px-8 mx-auto max-w-lg dark:text-white'>
+            <div
+                className={`px-8 mx-auto max-w-lg dark:text-white ${animateForm}`}
+            >
                 <h1 className='text-3xl font-bold text-center sm:text-start'>
                     Drop me a message
                 </h1>
@@ -90,7 +107,9 @@ const Contact = () => {
                     </div>
                 </form>
             </div>
-            <div className='bg-sky-700 py-3 xs:px-5 sm:px-5 md:px-0 rounded'>
+            <div
+                className={`bg-sky-700 py-3 xs:px-5 sm:px-5 md:px-0 rounded ${animateMap}`}
+            >
                 <Map />
             </div>
             <ToastContainer

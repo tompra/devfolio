@@ -12,10 +12,17 @@ const App = () => {
     const [darkMode, setDarkMode] = useState(false);
     const [isModalOpen, setModalOpen] = useState(false);
     const [modalContent, setModalContent] = useState(null);
+    const [isOpen, setIsOpen] = useState(false);
+
+    const animateVisibility = (inView, animationClass) => {
+        return inView ? animationClass : '';
+    };
+
+    const handleClickOnItem = () => {
+        setIsOpen(false);
+    };
 
     const toggleModal = (content) => {
-        console.log('modal is clicked');
-        console.log('content', content);
         setModalContent(content);
         setModalOpen(!isModalOpen);
     };
@@ -26,13 +33,22 @@ const App = () => {
                 darkMode ? 'bg-slate-800' : ''
             }`}
         >
-            <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
-            <Home />
+            <Navbar
+                darkMode={darkMode}
+                setDarkMode={setDarkMode}
+                isOpen={isOpen}
+                setIsOpen={setIsOpen}
+                handleClickOnItem={handleClickOnItem}
+            />
+            <Home isOpen={isOpen} />
             <About />
-            <Skills />
-            <Projects toggleModal={toggleModal} />
-            <Contact />
-            <Footer />
+            <Skills animateVisibility={animateVisibility} />
+            <Projects
+                toggleModal={toggleModal}
+                animateVisibility={animateVisibility}
+            />
+            <Contact animateVisibility={animateVisibility} />
+            <Footer animateVisibility={animateVisibility} />
 
             {isModalOpen && (
                 <Modal toggleModal={toggleModal} content={modalContent} />
