@@ -5,6 +5,7 @@ import { IoCloseSharp } from 'react-icons/io5';
 import { IoSunnySharp } from 'react-icons/io5';
 import logoWhite from '../assets/logo/LogoTPwhite.png';
 import logo from '../assets/logo/LogoTP.png';
+import PropTypes from 'prop-types';
 
 const Navbar = ({
     setDarkMode,
@@ -78,5 +79,12 @@ const Navbar = ({
             </div>
         </nav>
     );
+};
+Navbar.propTypes = {
+    darkMode: PropTypes.bool.isRequired,
+    setDarkMode: PropTypes.func.isRequired,
+    isOpen: PropTypes.bool.isRequired,
+    setIsOpen: PropTypes.func.isRequired,
+    handleClickOnItem: PropTypes.func.isRequired,
 };
 export default Navbar;

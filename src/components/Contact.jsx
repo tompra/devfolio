@@ -5,6 +5,7 @@ import { PUBLIC_KEY, TEMPLATE_ID, SERVICE_ID } from '../../secrets.json';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useInView } from 'react-intersection-observer';
+import PropTypes from 'prop-types';
 
 const Contact = ({ animateVisibility }) => {
     const form = useRef();
@@ -124,5 +125,8 @@ const Contact = ({ animateVisibility }) => {
             />
         </section>
     );
+};
+Contact.propTypes = {
+    animateVisibility: PropTypes.func.isRequired,
 };
 export default Contact;

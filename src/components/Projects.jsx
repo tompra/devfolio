@@ -1,5 +1,6 @@
 import { projects } from '../data';
 import { useInView } from 'react-intersection-observer';
+import PropTypes from 'prop-types';
 
 const Projects = ({ toggleModal, animateVisibility }) => {
     const { ref, inView } = useInView({
@@ -115,5 +116,10 @@ const Projects = ({ toggleModal, animateVisibility }) => {
             </div>
         </section>
     );
+};
+
+Projects.propTypes = {
+    toggleModal: PropTypes.func.isRequired,
+    animateVisibility: PropTypes.func.isRequired,
 };
 export default Projects;

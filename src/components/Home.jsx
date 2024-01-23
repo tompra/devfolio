@@ -1,5 +1,6 @@
 import { FaGithubSquare, FaLinkedin, FaTwitterSquare } from 'react-icons/fa';
 import Img1 from '../assets/photos/portrait-picture.jpeg';
+import PropTypes from 'prop-types';
 
 const Home = ({ isOpen }) => {
     const nameArr = ['T', 'h', 'o', 'm', 'a', 's'];
@@ -68,5 +69,9 @@ const Home = ({ isOpen }) => {
             </article>
         </section>
     );
+};
+
+Home.propTypes = {
+    isOpen: PropTypes.bool.isRequired,
 };
 export default Home;

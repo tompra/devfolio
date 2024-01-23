@@ -1,5 +1,6 @@
 import { connectLogos } from '../data';
 import { useInView } from 'react-intersection-observer';
+import PropTypes from 'prop-types';
 
 const Footer = ({ animateVisibility }) => {
     const { ref, inView } = useInView({
@@ -41,5 +42,8 @@ const Footer = ({ animateVisibility }) => {
             </div>
         </footer>
     );
+};
+Footer.propTypes = {
+    animateVisibility: PropTypes.func.isRequired,
 };
 export default Footer;
