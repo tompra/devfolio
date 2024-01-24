@@ -11,7 +11,7 @@ const customIcon = new L.icon({
 });
 
 const Map = () => {
-    const position = [52.52, 13.405];
+    const position = [52.53621010143943, 13.433024435511214];
     return (
         <div className='align-element relative w-full h-96 md:h-full max-h-96 md:max-h-full sm:w-80 md:w-full md:px-5 mx-auto'>
             <MapContainer
