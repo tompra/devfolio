@@ -8,6 +8,10 @@ import { useInView } from 'react-intersection-observer';
 import PropTypes from 'prop-types';
 
 const Contact = ({ animateVisibility }) => {
+    const publicKey = process.env.REACT_APP_PUBLIC_KEY || PUBLIC_KEY;
+    const templateId = process.env.REACT_APP_TEMPLATE_ID || TEMPLATE_ID;
+    const serviceId = process.env.REACT_APP_SERVICE_ID || SERVICE_ID;
+
     const form = useRef();
     const { ref, inView } = useInView({
         triggerOnce: true,
@@ -18,19 +22,17 @@ const Contact = ({ animateVisibility }) => {
         console.log('sending form');
         console.log('form.current', form.current);
 
-        emailjs
-            .sendForm(SERVICE_ID, TEMPLATE_ID, form.current, PUBLIC_KEY)
-            .then(
-                (result) => {
-                    console.log('result', result);
-                    console.log('result.text', result.text);
-                    toast.success('Email sent successfully!');
-                },
-                (error) => {
-                    console.log(error.text);
-                    toast.error('Error sending email. Please try again!');
-                }
-            );
+        emailjs.sendForm(serviceId, templateId, form.current, publicKey).then(
+            (result) => {
+                console.log('result', result);
+                console.log('result.text', result.text);
+                toast.success('Email sent successfully!');
+            },
+            (error) => {
+                console.log(error.text);
+                toast.error('Error sending email. Please try again!');
+            }
+        );
     };
 
     const animateForm = animateVisibility(
