@@ -1,24 +1,26 @@
 import Map from './Map';
 import { useRef } from 'react';
 import emailjs from '@emailjs/browser';
-import { useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useInView } from 'react-intersection-observer';
 import PropTypes from 'prop-types';
+import { PUBLIC_KEY, SERVICE_ID, TEMPLATE_ID } from '../../secrets.json';
 
 const Contact = ({ animateVisibility }) => {
-    const publicKey = process.env.REACT_APP_PUBLIC_KEY || 'default-public-key';
+    const publicKey =
+        typeof process !== 'undefined'
+            ? process.env.REACT_APP_PUBLIC_KEY
+            : PUBLIC_KEY;
     const templateId =
-        process.env.REACT_APP_TEMPLATE_ID || 'default-template-id';
-    const serviceId = process.env.REACT_APP_SERVICE_ID || 'default-service-id';
+        typeof process !== 'undefined'
+            ? process.env.REACT_APP_TEMPLATE_ID
+            : TEMPLATE_ID;
+    const serviceId =
+        typeof process !== 'undefined'
+            ? process.env.REACT_APP_SERVICE_ID
+            : SERVICE_ID;
 
-    const [formData, setFormData] = useState({
-        email: '',
-        name: '',
-        subject: '',
-        message: '',
-    });
     const form = useRef();
 
     const { ref, inView } = useInView({
@@ -28,21 +30,18 @@ const Contact = ({ animateVisibility }) => {
     const sendEmail = (e) => {
         e.preventDefault();
         console.log('form');
-        emailjs.sendForm(serviceId, templateId, formData, publicKey).then(
+        emailjs.sendForm(serviceId, templateId, form.current, publicKey).then(
             (result) => {
                 console.log('result', result.text);
-                setFormData({ email: '', name: '', subject: '', message: '' });
                 toast.success('Email sent successfully!');
             },
             (error) => {
-                console.log(error.text);
+                console.log('error', error);
+                console.log('error.text', error.text);
                 toast.error('Error sending email. Please try again!');
             }
         );
     };
-
-    const handleChange = (e) =>
-        setFormData({ ...formData, [e.target.id]: e.target.value });
 
     const animateForm = animateVisibility(
         inView,
@@ -73,43 +72,35 @@ const Contact = ({ animateVisibility }) => {
                 </p>
                 <form ref={form} className='mx-auto space-y-4 my-10'>
                     <input
-                        onChange={handleChange}
                         type='text'
                         name='user_name'
                         placeholder='Name'
                         autoComplete='none'
                         id='name'
-                        value={formData.name}
                         required
                         className='w-full rounded-md py-2.5 px-4 border text-sm outline-[#007bff]'
                     />
                     <input
-                        onChange={handleChange}
                         type='email'
                         name='user_email'
                         placeholder='Email'
                         autoComplete='none'
                         id='email'
-                        value={formData.email}
                         required
                         className='w-full rounded-md py-2.5 px-4 border text-sm outline-[#007bff]'
                     />
                     <input
-                        onChange={handleChange}
                         type='text'
                         name='user_subject'
                         placeholder='Subject'
                         id='subject'
-                        value={formData.subject}
                         className='w-full rounded-md py-2.5 px-4 border text-sm outline-[#007bff]'
                     />
                     <textarea
-                        onChange={handleChange}
                         placeholder='Message'
                         name='user_message'
                         rows='6'
                         id='email-body'
-                        value={formData.message}
                         required
                         className='w-full rounded-md px-4 border text-sm pt-2.5 outline-[#007bff]'
                     ></textarea>
