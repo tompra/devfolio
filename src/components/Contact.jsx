@@ -1,10 +1,10 @@
 import Map from './Map';
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-import { useInView } from 'react-intersection-observer';
 import PropTypes from 'prop-types';
+import { useInView } from 'react-intersection-observer';
 import { useState } from 'react';
+import { ToastContainer, toast } from 'react-toastify';
 import { sendEmail } from '../sendEmail';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Contact = ({ animateVisibility }) => {
     const [formData, setFormData] = useState({
@@ -25,8 +25,15 @@ const Contact = ({ animateVisibility }) => {
         });
     };
 
-    const handleSendEmail = () => {
-        sendEmail(formData);
+    const handleSendEmail = async (e) => {
+        e.preventDefault();
+        try {
+            sendEmail(formData);
+            toast.success('Email was sent successfully!');
+        } catch (err) {
+            console.error('Error sending mail', err);
+            toast.error('Error sending email. Please try again later!');
+        }
     };
 
     const { ref, inView } = useInView({
@@ -126,7 +133,7 @@ const Contact = ({ animateVisibility }) => {
             </div>
             <ToastContainer
                 position='top-center'
-                autoClose={2000}
+                autoClose={3000}
                 hideProgressBar={false}
                 newestOnTop={false}
                 closeOnClick
