@@ -1,6 +1,19 @@
+import { ToastContainer, toast } from 'react-toastify';
 import Img2 from '../assets/photos/climb.jpeg';
 
 const About = () => {
+    const downloadCV = () => {
+        fetch('cv.pdf').then((response) => {
+            response.blob().then((blob) => {
+                const fileURL = window.URL.createObjectURL(blob);
+                let anchorLink = document.createElement('a');
+                anchorLink.href = fileURL;
+                anchorLink.download = 'cv.pdf';
+                anchorLink.click();
+            });
+        });
+    };
+
     return (
         <section
             className='bg-white align-element sm:py-20 border-b-2 border-gray-700 xs:py-12 dark:bg-gray-600 animate-fade-left animate-once animate-duration-1000 animate-delay-300 animate-ease-in-out'
@@ -12,25 +25,72 @@ const About = () => {
                         About me
                     </h1>
                     <p className='py-3 leading-7'>
-                        Hi there, I am a versatile professional with a
-                        background in economics, multimedia design, and
-                        currently excelling as a web developer. My journey
-                        started with roles ranging from junior administrative to
-                        event coordination, cultivating strong communication,
-                        problem-solving, organizational, and flexibility skills.
-                        As a creative and detail-oriented person, I find joy in
-                        tackling challenges and continuously expanding my
-                        knowledge.
+                        Hi! I’m Thomas, a full-stack web developer with skills
+                        cultivated throughout diverse experience in economics,
+                        multimedia design, and even tattooing. Now I’m eagerly
+                        seeking my inaugural role in web development. My journey
+                        started as a junior administrator role, manager of a
+                        catering service, and overseeing delivery riders for an
+                        online supermarket chain.
+                    </p>
+                    <p className='py-3 leading-7'>
+                        These experiences have shaped me into a dynamic
+                        problem-solver, capable of navigating different
+                        challenges. Beyond talking to computers, my passion
+                        involves gravity and the vertical realm. Climbing is my
+                        main hobby from bouldering to rope ascents. I find equal
+                        joy by drawing and tattooing, complemented by yoga,
+                        cycling and nature strolls. I thrive on movement, not
+                        just physically but also mentally – a quality that
+                        aligns with web development.
+                    </p>
+                    <p className='py-3 leading-7'>
+                        While my background may not scream ‘tech’, I’m quite
+                        enthusiastic for the digital realm. I embrace new
+                        technologies, applications, and their documentation. The
+                        world of programming, with its collaborative projects
+                        and problem-solving efforts, captivates me. The
+                        satisfaction for overcoming challenges fuels my drive to
+                        improve. If you are keen on working together, feel free
+                        to reach out through this{' '}
+                        <a
+                            href='#contact'
+                            className='text-sky-500 font-bold underline'
+                        >
+                            form
+                        </a>{' '}
+                        or explore my profiles on various platforms.
                     </p>
                 </div>
-                <div className='xs:hidden sm:flex sm:items-center md:w-80 md:h-80 overflow-hidden rounded-xl shadow-[0_3px_10px_rgb(0,0,0,0.5)] mx-auto border-4 border-sky-500 hover:shadow-none animate-fade-up animate-once animate-duration-1000 animate-delay-[800ms] animate-ease-in-out'>
-                    <img
-                        src={Img2}
-                        alt='Me climbing a boulder'
-                        className='object-cover w-full h-full hover:opacity-90 '
-                    />
+                <div className='sm:flex sm:flex-col sm:justify-start sm:items-center h-full w-full pt-2'>
+                    <div className='xs:hidden sm:flex w-96 h-96 rounded-xl shadow-[0_3px_10px_rgb(0,0,0,0.5)] border-4 border-sky-500 hover:shadow-none  animate-fade-up animate-once animate-duration-1000 animate-delay-[800ms] animate-ease-in-out'>
+                        <img
+                            src={Img2}
+                            alt='Me climbing a boulder'
+                            className='object-cover w-full h-full rounded-lg hover:opacity-95'
+                        />
+                    </div>
+                    <div className='flex pt-10'>
+                        <button
+                            onClick={downloadCV}
+                            className='relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800'
+                        >
+                            <span className='relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0'>
+                                Download my CV
+                            </span>
+                        </button>
+                        <a
+                            href='#projects'
+                            className='relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800'
+                        >
+                            <span className='relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0'>
+                                Check my work
+                            </span>
+                        </a>
+                    </div>
                 </div>
             </div>
+            <ToastContainer />
         </section>
     );
 };
