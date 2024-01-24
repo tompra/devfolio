@@ -3,7 +3,7 @@ import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
 
 const customIcon = new L.icon({
-    iconUrl: '../../public/location-ping.png',
+    iconUrl: `${process.env.PUBLIC_URL}/location-ping.png`,
     iconSize: [32, 32],
     iconAnchor: [16, 32],
     popupAnchor: [0, -32],
