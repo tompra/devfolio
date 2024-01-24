@@ -16,7 +16,6 @@ const Contact = ({ animateVisibility }) => {
 
     const handleInputForm = (e) => {
         const { name, value } = e.target;
-        console.log('name', name, 'Value', value);
         setFormData((prevInput) => {
             return {
                 ...prevInput,

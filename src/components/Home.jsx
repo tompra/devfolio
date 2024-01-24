@@ -1,5 +1,5 @@
 import { FaGithubSquare, FaLinkedin, FaTwitterSquare } from 'react-icons/fa';
-import Img1 from '../assets/photos/portrait-picture.jpeg';
+import Img1 from '../assets/photos/portrait.png';
 import PropTypes from 'prop-types';
 
 const Home = ({ isOpen }) => {
