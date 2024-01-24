@@ -62,14 +62,14 @@ const About = () => {
                     </p>
                 </div>
                 <div className='sm:flex sm:flex-col sm:justify-start sm:items-center h-full w-full pt-2'>
-                    <div className='xs:hidden sm:flex w-96 h-96 rounded-xl shadow-[0_3px_10px_rgb(0,0,0,0.5)] border-4 border-sky-500 hover:shadow-none  animate-fade-up animate-once animate-duration-1000 animate-delay-[800ms] animate-ease-in-out'>
+                    <div className='xs:hidden sm:flex sm:w-90 sm:h-96 rounded-xl shadow-[0_3px_10px_rgb(0,0,0,0.5)] border-4 border-sky-500 hover:shadow-none  animate-fade-up animate-once animate-duration-1000 animate-delay-[800ms] animate-ease-in-out'>
                         <img
                             src={Img2}
                             alt='Me climbing a boulder'
                             className='object-cover w-full h-full rounded-lg hover:opacity-95'
                         />
                     </div>
-                    <div className='flex pt-10'>
+                    <div className='flex justify-center pt-10'>
                         <button
                             onClick={downloadCV}
                             className='relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800'
