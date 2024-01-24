@@ -38,7 +38,7 @@ const Projects = ({ toggleModal, animateVisibility }) => {
                             return (
                                 <span
                                     key={index}
-                                    className='relative inline-flex items-center justify-center p-2 mb-2 me-2 overflow-hidden xs:text-xs md:text-sm font-medium text-slate-100 rounded-lg group bg-gradient-to-br from-purple-600 to-sky-600 group-hover:from-purple-600 group-hover:to-sky-600 hover:text-slate-300 dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 mr-3 '
+                                    className='relative inline-flex items-center justify-center p-2 mb-2 me-2 overflow-hidden xs:text-xs sm:text-sm font-medium text-slate-100 rounded-lg group bg-gradient-to-br from-purple-600 to-sky-600 group-hover:from-purple-600 group-hover:to-sky-600 hover:text-slate-300 dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 mr-3 '
                                 >
                                     {tool}
                                 </span>
@@ -61,11 +61,11 @@ const Projects = ({ toggleModal, animateVisibility }) => {
                                     {title}
                                 </h1>
                                 <div className='my-5'>{toolList}</div>
-                                <p className='mb-3 font-normal text-gray-700 dark:text-gray-400'>
+                                <p className='mb-3 font-normal text-gray-700 xs:text-sm sm:text-sm md:text-base dark:text-gray-400'>
                                     {text}
                                 </p>
                                 <div className='flex flex-wrap gap-3 xs:justify-center sm:justify-start '>
-                                    <button className='relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800'>
+                                    <button className='relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden sm:text-sm xs:text-xs md:test-base font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800'>
                                         <span className='relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0'>
                                             <a
                                                 href={github}
@@ -76,7 +76,7 @@ const Projects = ({ toggleModal, animateVisibility }) => {
                                             </a>
                                         </span>
                                     </button>
-                                    <button className='relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800'>
+                                    <button className='relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden sm:text-sm xs:text-xs md:test-base font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800'>
                                         <span className='relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0'>
                                             {url ? (
                                                 <a
@@ -93,7 +93,7 @@ const Projects = ({ toggleModal, animateVisibility }) => {
                                                         target='_blank'
                                                         rel='noopener noreferrer'
                                                     >
-                                                        Find how to build
+                                                        Discover & Build
                                                     </a>
                                                 </>
                                             )}
@@ -101,7 +101,7 @@ const Projects = ({ toggleModal, animateVisibility }) => {
                                     </button>
                                     <button
                                         onClick={() => toggleModal(project)}
-                                        className='relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800'
+                                        className='relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden sm:text-sm xs:text-xs md:test-base font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800'
                                     >
                                         <span className='relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0'>
                                             See more

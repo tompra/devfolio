@@ -31,7 +31,7 @@ const Navbar = ({
                     )}
                 </div>
                 <ul
-                    className={`sm:flex-row :xs:flex xs:flex-col xs:justify-center xs:items-center xs:pl-0 md:flex md:items-center md:pb-0 pb-5 absolute md:static md:z-auto md:px-10 left-0 w-full md:w-auto md:pl-0 pl-9 animate-fade-left animate-once animate-duration-500 animate-delay-1000 animate-ease-out xs:bg-sky-600 sm:bg-transparent dark:text-white xs:shadow-xl sm:shadow-none    ${
+                    className={`sm:flex-row :xs:flex xs:flex-col xs:justify-center xs:items-center xs:pl-0 md:flex md:items-center md:pb-0 pb-5 absolute md:static md:z-auto md:px-10 left-0 w-full md:w-auto md:pl-0 pl-9 animate-fade-left animate-once animate-duration-500 animate-delay-1000 animate-ease-out xs:bg-sky-600 sm:bg-transparent dark:text-white xs:shadow-xl sm:shadow-none dark:xs:bg-gray-900   ${
                         isOpen
                             ? `top-18 z-10 animate-fade-down animate-once animate-duration-500 animate-delay-300 animate-ease-in`
                             : 'top-[-490px]'
