@@ -29,15 +29,14 @@ const Contact = ({ animateVisibility }) => {
     const sendEmail = async (e) => {
         e.preventDefault();
 
-        const formData = new FormData(form.current);
-        console.log('form', form.current);
-        console.log('formData', formData);
+        console.log('form', form);
+        console.log('formCurrent', form.current);
 
         try {
             const result = await emailjs.sendForm(
                 serviceId,
                 templateId,
-                formData,
+                form.current,
                 publicKey
             );
             console.log('result', result.text);
