@@ -26,20 +26,25 @@ const Contact = ({ animateVisibility }) => {
         triggerOnce: true,
     });
 
-    const sendEmail = (e) => {
+    const sendEmail = async (e) => {
         e.preventDefault();
         console.log('form');
-        emailjs.send(serviceId, templateId, form.current, publicKey).then(
-            (result) => {
-                console.log('result', result.text);
-                toast.success('Email sent successfully!');
-            },
-            (error) => {
-                console.log('error', error);
-                console.log('error.text', error.text);
-                toast.error('Error sending email. Please try again!');
-            }
-        );
+
+        const formData = new FormData(form.current);
+
+        try {
+            const result = await emailjs.sendForm(
+                serviceId,
+                templateId,
+                formData,
+                publicKey
+            );
+            console.log('result', result.text);
+        } catch (error) {
+            console.log('error', error);
+            console.log('error.text', error.text);
+            toast.error('Error sending email. Please try again!');
+        }
     };
 
     const animateForm = animateVisibility(
