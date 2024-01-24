@@ -1,6 +1,7 @@
 import Map from './Map';
 import { useRef } from 'react';
 import emailjs from '@emailjs/browser';
+import { useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useInView } from 'react-intersection-observer';
@@ -12,17 +13,25 @@ const Contact = ({ animateVisibility }) => {
         process.env.REACT_APP_TEMPLATE_ID || 'default-template-id';
     const serviceId = process.env.REACT_APP_SERVICE_ID || 'default-service-id';
 
+    const [formData, setFormData] = useState({
+        email: '',
+        name: '',
+        subject: '',
+        message: '',
+    });
     const form = useRef();
+
     const { ref, inView } = useInView({
         triggerOnce: true,
     });
 
     const sendEmail = (e) => {
         e.preventDefault();
-
-        emailjs.sendForm(serviceId, templateId, form.current, publicKey).then(
+        console.log('form');
+        emailjs.sendForm(serviceId, templateId, formData, publicKey).then(
             (result) => {
                 console.log('result', result.text);
+                setFormData({ email: '', name: '', subject: '', message: '' });
                 toast.success('Email sent successfully!');
             },
             (error) => {
@@ -31,6 +40,9 @@ const Contact = ({ animateVisibility }) => {
             }
         );
     };
+
+    const handleChange = (e) =>
+        setFormData({ ...formData, [e.target.id]: e.target.value });
 
     const animateForm = animateVisibility(
         inView,
@@ -59,46 +71,51 @@ const Contact = ({ animateVisibility }) => {
                     large projects. If you have a question or a request, just
                     contact me using the form below.{' '}
                 </p>
-                <form
-                    ref={form}
-                    className='mx-auto space-y-4 my-10'
-                    onSubmit={sendEmail}
-                >
+                <form ref={form} className='mx-auto space-y-4 my-10'>
                     <input
+                        onChange={handleChange}
                         type='text'
                         name='user_name'
                         placeholder='Name'
                         autoComplete='none'
                         id='name'
+                        value={formData.name}
                         required
                         className='w-full rounded-md py-2.5 px-4 border text-sm outline-[#007bff]'
                     />
                     <input
+                        onChange={handleChange}
                         type='email'
                         name='user_email'
                         placeholder='Email'
                         autoComplete='none'
                         id='email'
+                        value={formData.email}
                         required
                         className='w-full rounded-md py-2.5 px-4 border text-sm outline-[#007bff]'
                     />
                     <input
+                        onChange={handleChange}
                         type='text'
                         name='user_subject'
                         placeholder='Subject'
                         id='subject'
+                        value={formData.subject}
                         className='w-full rounded-md py-2.5 px-4 border text-sm outline-[#007bff]'
                     />
                     <textarea
+                        onChange={handleChange}
                         placeholder='Message'
                         name='user_message'
                         rows='6'
                         id='email-body'
+                        value={formData.message}
                         required
                         className='w-full rounded-md px-4 border text-sm pt-2.5 outline-[#007bff]'
                     ></textarea>
                     <div className='flex justify-center'>
                         <button
+                            onClick={(e) => sendEmail(e)}
                             type='submit'
                             className='relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800'
                         >
