@@ -3,8 +3,6 @@ import { links } from '../data';
 import { HiMenuAlt1 } from 'react-icons/hi';
 import { IoCloseSharp } from 'react-icons/io5';
 import { IoSunnySharp } from 'react-icons/io5';
-import logoWhite from '../assets/logo/LogoTPwhite.png';
-import logo from '../assets/logo/LogoTP.png';
 import PropTypes from 'prop-types';
 
 const Navbar = ({
@@ -18,11 +16,9 @@ const Navbar = ({
         <nav className='align-element sm:animate-fade-down sm:animate-once sm:animate-duration-1000 sm:animate-delay-100 sm:animate-ease-in-out'>
             <div className='md:flex items-center justify-between bg-sky-600 dark:bg-gray-900 dark:xs:bg-gray-900 py-10'>
                 <div className='cursor-pointer flex items-center gap-1'>
-                    <img
-                        src={darkMode ? logoWhite : logo}
-                        alt='Logo of myself'
-                        className='w-28  xs:w-24 xs:ml-4 sm:ml-8 animate-fade animate-once animate-duration-500 animate-delay-[1000ms] animate-ease-out hover:opacity-80'
-                    />
+                    <h1 className='text-4xl tracking-wider xs:ml-4 sm:ml-8 animate-fade animate-once animate-duration-500 animate-delay-[1000ms] animate-ease-out hover:opacity-80 dark:text-white'>
+                        ⦿TP
+                    </h1>
                 </div>
                 <div
                     onClick={() => setIsOpen(!isOpen)}
