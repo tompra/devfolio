@@ -11,9 +11,9 @@ const Toolbelt = () => {
             <div className='container mx-auto flex flex-wrap items-start p-2'>
                 {toolbelt.map((tool, index) => {
                     const { id, title, items } = tool;
-                    const leftToRightDelay = 500 * index + 1;
+                    const leftToRightDelay = 300 * index;
                     const rightToLeftDelay =
-                        400 * (toolbelt.length - 1 - index + 1);
+                        300 * (toolbelt.length - 1 - index);
                     return (
                         <div
                             key={id}
