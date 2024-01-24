@@ -29,7 +29,7 @@ const Contact = ({ animateVisibility }) => {
     const sendEmail = (e) => {
         e.preventDefault();
         console.log('form');
-        emailjs.sendForm(serviceId, templateId, form.current, publicKey).then(
+        emailjs.send(serviceId, templateId, form.current, publicKey).then(
             (result) => {
                 console.log('result', result.text);
                 toast.success('Email sent successfully!');
