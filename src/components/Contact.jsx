@@ -28,9 +28,10 @@ const Contact = ({ animateVisibility }) => {
 
     const sendEmail = async (e) => {
         e.preventDefault();
-        console.log('form');
 
         const formData = new FormData(form.current);
+        console.log('form', form.current);
+        console.log('formData', formData);
 
         try {
             const result = await emailjs.sendForm(
