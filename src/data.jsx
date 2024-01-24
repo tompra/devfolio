@@ -37,7 +37,7 @@ import popcornhubImage from './assets/proyects/popcornhub.png';
 import cinematixImage from './assets/proyects/cinematix.png';
 import chatAppImage from './assets/proyects/chat-app.png';
 import meetConnectImage from './assets/proyects/meetConnect.png';
-import filmifyImage from './assets/proyects/filmifyAngular.png';
+import filmifyImage from './assets/proyects/filmify.png';
 
 export const links = [
     { id: nanoid(), href: '#home', text: 'home' },
