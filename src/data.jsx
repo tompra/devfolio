@@ -13,6 +13,7 @@ import {
     FaTrello,
     FaAngular,
     FaTwitter,
+    FaLinkedin,
 } from 'react-icons/fa';
 import {
     SiExpress,
@@ -455,17 +456,20 @@ export const connectLogos = [
         logo: (
             <FaGithub className='xs:h-5 xs:w-5 sm:h-8 sm:w-8 text-slate-600 hover:text-sky-500 dark:text-slate-200 dark:hover:text-sky-300' />
         ),
+        link: 'https://github.com/tompra',
     },
     {
         id: nanoid(),
         logo: (
-            <FaTwitter className='xs:h-5 xs:w-5 sm:h-8 sm:w-8 text-slate-600 hover:text-sky-500 dark:text-slate-200 dark:hover:text-sky-300' />
+            <FaLinkedin className='xs:h-5 xs:w-5 sm:h-8 sm:w-8 text-slate-600 hover:text-sky-500 dark:text-slate-200 dark:hover:text-sky-300' />
         ),
+        link: 'https://www.linkedin.com/in/thom-prayon',
     },
     {
         id: nanoid(),
         logo: (
             <SiGmail className='xs:h-5 xs:w-5 sm:h-8 sm:w-8 text-slate-600 hover:text-sky-500 dark:text-slate-200 dark:hover:text-sky-300' />
         ),
+        link: 'mailto:tomprayon@gmail.com',
     },
 ];

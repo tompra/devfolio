@@ -22,14 +22,14 @@ const Footer = ({ animateVisibility }) => {
             </h1>
             <div className='flex flex-row justify-center my-5'>
                 {connectLogos.map((logos) => {
-                    const { id, logo } = logos;
+                    const { id, logo, link } = logos;
                     return (
                         <div key={id}>
                             <button
                                 type='button'
                                 className='mx-5 border border-slate-700 dark:border-slate-300 hover:bg-sky-700 hover:text-white font-medium rounded-full text-base p-2.5 text-center inline-flex items-center'
                             >
-                                {logo}
+                                <a href={link}>{logo}</a>
                             </button>
                         </div>
                     );

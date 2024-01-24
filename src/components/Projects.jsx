@@ -9,7 +9,7 @@ const Projects = ({ toggleModal, animateVisibility }) => {
 
     const animateCards = animateVisibility(
         inView,
-        'animate-fade-left animate-once animate-duration-800 animate-delay-[800ms] animate-ease-in'
+        'animate-fade-left animate-once animate-duration-800 animate-delay-400 animate-ease-in'
     );
 
     const animateTitle = animateVisibility(
