@@ -16,6 +16,9 @@ export default {
             screens: {
                 xs: '320px',
             },
+            width: {
+                95: '95%',
+            },
         },
     },
     plugins: [require('tailwindcss-animated')],
