@@ -5,21 +5,20 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useInView } from 'react-intersection-observer';
 import PropTypes from 'prop-types';
-import { PUBLIC_KEY, SERVICE_ID, TEMPLATE_ID } from '../../secrets.json';
 
 const Contact = ({ animateVisibility }) => {
     const publicKey =
         typeof process !== 'undefined'
             ? process.env.REACT_APP_PUBLIC_KEY
-            : PUBLIC_KEY;
+            : 'default_PUBLIC_KEY';
     const templateId =
         typeof process !== 'undefined'
             ? process.env.REACT_APP_TEMPLATE_ID
-            : TEMPLATE_ID;
+            : 'default_TEMPLATE_ID';
     const serviceId =
         typeof process !== 'undefined'
             ? process.env.REACT_APP_SERVICE_ID
-            : SERVICE_ID;
+            : 'default_SERVICE_ID';
 
     const form = useRef();
 
