@@ -19,13 +19,10 @@ const Contact = ({ animateVisibility }) => {
 
     const sendEmail = (e) => {
         e.preventDefault();
-        console.log('sending form');
-        console.log('form.current', form.current);
 
         emailjs.sendForm(serviceId, templateId, form.current, publicKey).then(
             (result) => {
-                console.log('result', result);
-                console.log('result.text', result.text);
+                console.log('result', result.text);
                 toast.success('Email sent successfully!');
             },
             (error) => {
