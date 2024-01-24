@@ -1,4 +1,3 @@
-import { ToastContainer, toast } from 'react-toastify';
 import Img2 from '../assets/photos/climb.jpeg';
 
 const About = () => {
@@ -90,7 +89,6 @@ const About = () => {
                     </div>
                 </div>
             </div>
-            <ToastContainer />
         </section>
     );
 };
