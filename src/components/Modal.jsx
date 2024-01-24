@@ -1,10 +1,12 @@
+import PropTypes from 'prop-types';
+
 const Modal = ({ toggleModal, content }) => {
     if (!content) {
         return null;
     }
     return (
         <div className='fixed inset-0 bg-gray-800 bg-opacity-75 flex items-center py-5 justify-center animate-fade animate-once animate-duration-200 animate-delay-0 animate-ease-in'>
-            <div className='bg-white rounded-md relative w-full max-w-3xl h-full overflow-y-auto dark:bg-gray-600 dark:text-white'>
+            <div className='bg-white rounded-md relative w-full max-w-5xl h-full overflow-y-auto dark:bg-gray-600 dark:text-white'>
                 <div className='flex items-center justify-between p-4 md:py-5 border-b rounded-t dark:border-gray-600'>
                     <h1 className='text-2xl font-bold'>{content.title}</h1>
                     <button
@@ -68,5 +70,17 @@ const Modal = ({ toggleModal, content }) => {
             </div>
         </div>
     );
+};
+
+Modal.propTypes = {
+    toggleModal: PropTypes.func.isRequired,
+    content: PropTypes.shape({
+        title: PropTypes.string.isRequired,
+        img: PropTypes.string.isRequired,
+        description: PropTypes.string.isRequired,
+        userStories: PropTypes.arrayOf(PropTypes.string).isRequired,
+        keyFeatures: PropTypes.arrayOf(PropTypes.string).isRequired,
+        tools: PropTypes.arrayOf(PropTypes.string).isRequired,
+    }),
 };
 export default Modal;
