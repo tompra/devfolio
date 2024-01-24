@@ -1,10 +1,9 @@
 const Modal = ({ toggleModal, content }) => {
-    console.log('project', content);
     if (!content) {
         return null;
     }
     return (
-        <div className='fixed inset-0 bg-gray-800 bg-opacity-75 flex items-center justify-center '>
+        <div className='fixed inset-0 bg-gray-800 bg-opacity-75 flex items-center py-5 justify-center animate-fade animate-once animate-duration-200 animate-delay-0 animate-ease-in'>
             <div className='bg-white rounded-md relative w-full max-w-3xl h-full overflow-y-auto dark:bg-gray-600 dark:text-white'>
                 <div className='flex items-center justify-between p-4 md:py-5 border-b rounded-t dark:border-gray-600'>
                     <h1 className='text-2xl font-bold'>{content.title}</h1>
@@ -28,7 +27,7 @@ const Modal = ({ toggleModal, content }) => {
                                 d='m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6'
                             />
                         </svg>
-                        <span class='sr-only'>Close modal</span>
+                        <span className='sr-only'>Close modal</span>
                     </button>
                 </div>
                 <div className='p-4 mt-2'>
