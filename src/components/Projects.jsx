@@ -1,8 +1,10 @@
 import { projects } from '../data';
 import { useInView } from 'react-intersection-observer';
 import PropTypes from 'prop-types';
+import { useAppContext } from '../context/context';
 
-const Projects = ({ toggleModal, animateVisibility }) => {
+const Projects = () => {
+    const { toggleModal, animateVisibility } = useAppContext();
     const { ref, inView } = useInView({
         triggerOnce: true,
     });

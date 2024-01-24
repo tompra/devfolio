@@ -2,8 +2,10 @@ import Slider from './Slider';
 import Toolbelt from './Toolbelt';
 import { useInView } from 'react-intersection-observer';
 import PropTypes from 'prop-types';
+import { useAppContext } from '../context/context';
 
-const Skills = ({ animateVisibility }) => {
+const Skills = () => {
+    const { animateVisibility } = useAppContext();
     const { ref, inView } = useInView({
         triggerOnce: true,
     });

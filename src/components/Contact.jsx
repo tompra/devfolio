@@ -5,8 +5,10 @@ import { useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import { sendEmail } from '../sendEmail';
 import 'react-toastify/dist/ReactToastify.css';
+import { useAppContext } from '../context/context';
 
-const Contact = ({ animateVisibility }) => {
+const Contact = () => {
+    const { animateVisibility } = useAppContext();
     const [formData, setFormData] = useState({
         user_name: '',
         user_email: '',

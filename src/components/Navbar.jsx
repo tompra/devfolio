@@ -4,14 +4,11 @@ import { HiMenuAlt1 } from 'react-icons/hi';
 import { IoCloseSharp } from 'react-icons/io5';
 import { IoSunnySharp } from 'react-icons/io5';
 import PropTypes from 'prop-types';
+import { useAppContext } from '../context/context';
 
-const Navbar = ({
-    setDarkMode,
-    darkMode,
-    isOpen,
-    setIsOpen,
-    handleClickOnItem,
-}) => {
+const Navbar = () => {
+    const { darkMode, setDarkMode, isOpen, setIsOpen, handleClickOnItem } =
+        useAppContext();
     return (
         <nav className='align-element sm:animate-fade-down sm:animate-once sm:animate-duration-1000 sm:animate-delay-100 sm:animate-ease-in-out'>
             <div className='md:flex items-center justify-between bg-sky-600 dark:bg-gray-900 dark:xs:bg-gray-900 py-10'>

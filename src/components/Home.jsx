@@ -1,10 +1,11 @@
 import { FaGithubSquare, FaLinkedin, FaTwitterSquare } from 'react-icons/fa';
 import Img1 from '../assets/photos/portrait.png';
 import PropTypes from 'prop-types';
+import { useAppContext } from '../context/context';
 
-const Home = ({ isOpen }) => {
+const Home = () => {
     const nameArr = ['T', 'h', 'o', 'm', 'a', 's'];
-
+    const { isOpen } = useAppContext();
     return (
         <section
             className={`bg-sky-600 dark:bg-gray-700 align-element grid md:grid-cols-2  border-b-2 border-gray-400 dark:border-gray-500 py-16 animate-fade-right animate-once animate-duration-1000 animate-delay-500 animate-ease-in-out`}

@@ -1,8 +1,10 @@
 import { connectLogos } from '../data';
 import { useInView } from 'react-intersection-observer';
 import PropTypes from 'prop-types';
+import { useAppContext } from '../context/context';
 
-const Footer = ({ animateVisibility }) => {
+const Footer = () => {
+    const { animateVisibility } = useAppContext();
     const { ref, inView } = useInView({
         triggerOnce: true,
     });

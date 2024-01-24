@@ -62,7 +62,7 @@ const About = () => {
                     </p>
                 </div>
                 <div className='sm:flex sm:flex-col sm:justify-start sm:items-center h-full w-full pt-2'>
-                    <div className='xs:hidden sm:flex sm:w-90 sm:h-96 rounded-xl shadow-[0_3px_10px_rgb(0,0,0,0.5)] border-4 border-sky-500 hover:shadow-none  animate-fade-up animate-once animate-duration-1000 animate-delay-[800ms] animate-ease-in-out'>
+                    <div className='xs:hidden sm:flex sm:w-90 sm:h-96 lg:w-96 rounded-xl shadow-[0_3px_10px_rgb(0,0,0,0.5)] border-4 border-sky-500 hover:shadow-none  animate-fade-up animate-once animate-duration-1000 animate-delay-[800ms] animate-ease-in-out'>
                         <img
                             src={Img2}
                             alt='Me climbing a boulder'

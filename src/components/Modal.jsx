@@ -1,6 +1,8 @@
 import PropTypes from 'prop-types';
+import { useAppContext } from '../context/context';
 
-const Modal = ({ toggleModal, content }) => {
+const Modal = () => {
+    const { toggleModal, content } = useAppContext();
     if (!content) {
         return null;
     }

@@ -6,26 +6,20 @@ import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Modal from './components/Modal';
-import { useState } from 'react';
+import { useAppContext } from './context/context';
 
 const App = () => {
-    const [darkMode, setDarkMode] = useState(false);
-    const [isModalOpen, setModalOpen] = useState(false);
-    const [modalContent, setModalContent] = useState(null);
-    const [isOpen, setIsOpen] = useState(false);
-
-    const animateVisibility = (inView, animationClass) => {
-        return inView ? animationClass : '';
-    };
-
-    const handleClickOnItem = () => {
-        setIsOpen(false);
-    };
-
-    const toggleModal = (content) => {
-        setModalContent(content);
-        setModalOpen(!isModalOpen);
-    };
+    const {
+        darkMode,
+        setDarkMode,
+        isModalOpen,
+        modalContent,
+        isOpen,
+        setIsOpen,
+        animateVisibility,
+        handleClickOnItem,
+        toggleModal,
+    } = useAppContext();
 
     return (
         <div
