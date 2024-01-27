@@ -12,7 +12,7 @@ import {
     FaBootstrap,
     FaTrello,
     FaAngular,
-    FaTwitter,
+    FaMedium,
     FaLinkedin,
 } from 'react-icons/fa';
 import {

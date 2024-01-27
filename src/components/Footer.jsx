@@ -31,7 +31,9 @@ const Footer = () => {
                                 type='button'
                                 className='mx-5 border border-slate-700 dark:border-slate-300 hover:bg-sky-700 hover:text-white font-medium rounded-full text-base p-2.5 text-center inline-flex items-center'
                             >
-                                <a href={link}>{logo}</a>
+                                <a href={link} target='_blank' rel='noreferrer'>
+                                    {logo}
+                                </a>
                             </button>
                         </div>
                     );

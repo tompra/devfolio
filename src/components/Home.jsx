@@ -1,4 +1,4 @@
-import { FaGithubSquare, FaLinkedin, FaTwitterSquare } from 'react-icons/fa';
+import { FaGithubSquare, FaLinkedin, FaMedium } from 'react-icons/fa';
 import Img1 from '../assets/photos/portrait.png';
 import PropTypes from 'prop-types';
 import { useAppContext } from '../context/context';
@@ -42,20 +42,26 @@ const Home = () => {
                     <a
                         href='https://github.com/tompra'
                         className='hover:opacity-80'
+                        target='_blank'
+                        rel='noreferrer'
                     >
                         <FaGithubSquare className='h-10 w-10 text-slate-800 animate-fade animate-once animate-duration-1000 animate-delay-[1100ms] animate-ease-out hover:text-slate-600 dark:text-sky-200' />
                     </a>
                     <a
-                        href='www.linkedin.com/in/thom-prayon'
+                        href='https://www.linkedin.com/in/thom-prayon'
                         className='hover:opacity-80'
+                        target='_blank'
+                        rel='noreferrer'
                     >
                         <FaLinkedin className='h-10 w-10 text-slate-800 animate-fade animate-once animate-duration-1000 animate-delay-[1200ms] animate-ease-out hover:text-slate-600  dark:text-sky-200' />
                     </a>
                     <a
-                        href='https://twitter.com/TPrayon'
+                        href='https://medium.com/@tomprayon'
                         className='hover:opacity-80'
+                        target='_blank'
+                        rel='noreferrer'
                     >
-                        <FaTwitterSquare className='h-10 w-10 text-slate-800 animate-fade animate-once animate-duration-1000 animate-delay-[1300ms] animate-ease-out  hover:text-slate-600  dark:text-sky-200' />
+                        <FaMedium className='h-10 w-10 text-slate-800 animate-fade animate-once animate-duration-1000 animate-delay-[1300ms] animate-ease-out  hover:text-slate-600  dark:text-sky-200' />
                     </a>
                 </div>
             </article>
