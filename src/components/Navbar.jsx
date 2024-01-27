@@ -19,7 +19,7 @@ const Navbar = () => {
                 </div>
                 <div
                     onClick={() => setIsOpen(!isOpen)}
-                    className='absolute right-10  top-12 cursor-pointer md:hidden w-7 h-7 text-white dark:xs:text-white animate-fade animate-once animate-duration-300 animate-delay-300 animate-ease-in'
+                    className='absolute right-10  top-12 cursor-pointer md:hidden w-7 h-7 text-black dark:xs:text-white animate-fade animate-once animate-duration-300 animate-delay-300 animate-ease-in'
                 >
                     {isOpen ? (
                         <IoCloseSharp className='h-7 w-7' />
