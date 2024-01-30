@@ -14,7 +14,10 @@ const Navbar = () => {
             <div className='md:flex items-center justify-between bg-sky-600 dark:bg-gray-900 dark:xs:bg-gray-900 py-10'>
                 <div className='cursor-pointer flex items-center gap-1'>
                     <h1 className='text-4xl tracking-wider xs:ml-4 sm:ml-8 animate-fade animate-once animate-duration-500 animate-delay-[1000ms] animate-ease-out hover:opacity-80 dark:text-white'>
-                        ⦿TP
+                        <span className='flex lg:hidden font-bebas'>⦿TP</span>
+                        <span className='hidden lg:flex font-bebas'>
+                            ⦿Thomas Prayon
+                        </span>
                     </h1>
                 </div>
                 <div

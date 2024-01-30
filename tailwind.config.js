@@ -22,6 +22,7 @@ export default {
             },
             fontFamily: {
                 roboto: ['"Roboto Mono"', ...defaultTheme.fontFamily.mono],
+                bebas: ['"Bebas Neue"', ...defaultTheme.fontFamily.sans],
             },
         },
     },
