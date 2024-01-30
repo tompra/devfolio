@@ -61,7 +61,7 @@ const Projects = () => {
                             className={`bg-gray-100 dark:bg-gray-800 dark:text-white border border-gray-200 rounded-lg my-5 xs:shadow-[rgba(3,105,161)_0px_3px_8px] xs:mx-5  sm:shadow-[12px_12px_0px_0px_rgba(3,105,161)] dark:sm:shadow-[12px_12px_0px_0px_rgba(56, 189, 233)]  transition-all duration-300 transform hover:shadow-[0px_0px_0px_0px_rgba(3,105,161)] hover:border-2 hover:border-sky-700 ${animateCards}`}
                         >
                             <img
-                                className='rounded-t-lg w-full h-auto object-cover'
+                                className='rounded-t-lg w-full h-auto object-cover xs:hidden sm:flex'
                                 src={img}
                                 alt={title}
                             />
