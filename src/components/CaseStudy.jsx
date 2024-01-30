@@ -61,33 +61,43 @@ const CaseStudy = () => {
                     />
                 </div>
                 <div className='p-4'>
-                    <p className='font-bold text-xl py-2'>Overview</p>
+                    <p className='font-bold text-xl py-2 text-center'>
+                        Overview
+                    </p>
                     <p className='mb-3 font-normal my-1 leading-8'>
                         {overview}
                     </p>
-                    <p className='font-bold text-xl py-2'>
+                    <p className='font-bold text-xl py-2 text-center'>
                         Purpose & Objective
                     </p>
                     <p className='mb-3 font-normal my-1 leading-8'>{purpose}</p>
-                    <p className='font-bold text-xl py-2'>Duration</p>{' '}
+                    <p className='font-bold text-xl py-2 text-center'>
+                        Duration
+                    </p>{' '}
                     <p className='mb-3 font-normal my-1 leading-8'>
                         {duration}
                     </p>
-                    <p className='font-bold text-xl py-2'>Credits</p>{' '}
+                    <p className='font-bold text-xl py-2 text-center'>
+                        Credits
+                    </p>{' '}
                     <p className='mb-3 font-normal my-1 leading-8'>{credits}</p>
-                    <p className='font-bold text-xl py-2'>Tools</p>{' '}
+                    <p className='font-bold text-xl py-2 text-center'>
+                        Tools
+                    </p>{' '}
                     <p className='font-bold text-xl py-2'>Frontend</p>{' '}
                     <p className='mb-3 font-normal my-1'>{toolsFront}</p>
                     <p className='font-bold text-xl py-2'>Backend</p>{' '}
                     <p className='mb-3 font-normal my-1'>{toolsBack}</p>
-                    <p className='font-bold text-xl py-2'>Aproach</p>{' '}
+                    <p className='font-bold text-xl py-2 text-center'>
+                        Aproach
+                    </p>{' '}
                     <p className='font-bold text-xl py-2'>Frontend</p>{' '}
                     <p className='mb-3 font-normal my-1 leading-8'>
                         {frontend}
                     </p>
                     <p className='font-bold text-xl py-2'>Backend</p>{' '}
                     <p className='mb-3 font-normal my-1 leading-8'>{backend}</p>
-                    <p className='font-bold text-xl py-2'>
+                    <p className='font-bold text-xl py-2 text-center'>
                         Possible Improvements
                     </p>{' '}
                     <ul className='list-disc pl-4 mb-3'>
@@ -99,7 +109,9 @@ const CaseStudy = () => {
                             );
                         })}
                     </ul>
-                    <p className='font-bold text-xl py-2 '>Conclusion</p>{' '}
+                    <p className='font-bold text-xl py-2 text-center'>
+                        Conclusion
+                    </p>{' '}
                     <p className='my-1 leading-8'>{conclusion}</p>
                 </div>
             </div>

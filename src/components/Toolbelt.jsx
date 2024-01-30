@@ -32,7 +32,7 @@ const Toolbelt = () => {
                                     </h5>
                                 </div>
                                 <div className='flex flex-col p-2 flex-1'>
-                                    <p className='xs:text-base text-lg text-white font-light mb-2'>
+                                    <p className='xs:text-sm sm:text-base md:text-lg text-white font-light mb-2'>
                                         {items.join(' | ')}
                                     </p>
                                 </div>
