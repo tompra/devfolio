@@ -12,7 +12,6 @@ import {
     FaBootstrap,
     FaTrello,
     FaAngular,
-    FaMedium,
     FaLinkedin,
 } from 'react-icons/fa';
 import {
@@ -289,6 +288,36 @@ export const projects = [
             'Profile View: Displays favorite movies.',
             'Profile View: Allows users to remove a movie from their list of favorites.',
             'Profile View: Allows existing users to deregister.',
+        ],
+        caseStudy: [
+            {
+                overview:
+                    'Cinematix is a web application crafted with the MERN stack (MongoDB, Express, React, and Node.js), crafted to enrich the user experience. It features both backend and frontend components, with the frontend leveraging React to deliver an interface for essential functionality like login, registration, account management, movie details, and search input. The backend hosts a database where movies are stored, empowering users to personalize their account by adding favorite movies and updating profile details such as username, password, email, and birthday. The culmination of these efforts is a refined interface that allows users to browse movies and access specific details about their selections, culminating in an immersive experience. Cinematix is the ideal app for movie enthusiasts.',
+                purpose:
+                    'Cinematix is a project developed during the Career Foundry’s Full-Stack Web Development program. The objective was to create a dynamic, responsive, and immersive web application from the ground up, employing React for the frontend and constructing an API with Node.js, Express and MongoDB for the backend. This project served as an opportunity to showcase my skills and expertise, while also familiarizing myself with essential project requirements such as user stories and user flows. Through Cinematix, I not only demonstrated my expertise in web development but also my ability to meet the project expectations.',
+                duration:
+                    'Cinematix was crafted over the course of one month, a project that demanded significant time and attention. The complexity for mastering technologies like React Hooks, Redux and Context, required dedicated effort to ensure integration and functionality. ',
+                credits:
+                    'I created a React application that interacts with a movie API (Popcornhub API) I had previously developed, enabling the display of comprehensive movie information and user data. Throughout this project, I engaged in collaborative efforts with my mentor and tutor from CareerFoundry.',
+                toolsFront:
+                    'React, Vite, ESLint, React-Router, React Bootstrap, React-Icons, React-Toastify, React-Animated-Hear, SASS.',
+                toolsBack:
+                    'Node.js, Express, MongoDB, Morgan, bodyParser, mongoose, CORS, Passport, bcrypt, Postman, OnRender.',
+
+                backend:
+                    'On the server side, I crafted a RESTful API using Node.js and Express, integrating with MongoDB, a non-relational database. The API’s HTTP endpoints leverage CRUD methods to efficiently retrieve movie and user data through standard HTTP requests, delivering results in JSON format. This integration is facilitated by Mongoose, ensuring through the business logic layer. Authentication and authorization are implemented through HTTP and JWT based protocols, an authorization JWT token is returned to the client. This process validates registered users and grants them Read, Delete, and Update permissions. While initially challenging, with persistence, mastering authorization mechanisms became clear. Prior to deployment, testing of API endpoints using API endpoints using Postman and documentation for a smooth deployment process. The RESTful API was successfully deployed using OnRender.',
+                frontend:
+                    'In the client-side development of the MERN stack project, following the backend construction, I proceeded to build the user interface, completing the project’s full functionality. Using the React library, I created a responsive single-page website, guided by the MVC design pattern. The interface encompasses distinct views, including login, signup, main, movie, profile view. The login and signup view feature user-friendly forms for registration and login, while the main view showcases a list of available movies. Additionally, the single movie view provides detailed information about the user-selected movie, enhancing the user experience. Transitioning to React presented initial challenges in understanding state management and comprehending data traversal across components, especially compared to traditional HTML, CSS and VanillaJS. To overcome this learning curve, I dedicated considerable effort to thoroughly studying React documentation. In my effort to understand the data flow throughout components, I implemented React context, with a specific focus on user authentication and movie data. This allowed for efficient management and sharing of data across various parts of the application.',
+                improvements: [
+                    'Enhance the user profile by integrating user photos and personalized recommendations based on liked movies.',
+                    'Improve the registration and profile editing forms: incorporate a secondary password input to confirm accuracy and prevent typos. Implement a username availability check to ensure uniqueness.',
+                    'Introduce a confirmation dialog prompt prior to account deletion for added security.',
+                    'Upgrade movie filtering capabilities with advanced options, allowing users to filter by genre, actor, and director.',
+                    'Integrate actor and director profiles, showcasing their respective filmography and the various movies they have been involved in.',
+                ],
+                conclusion:
+                    'Crafting this project was quite a testament to my journey as a Web Developer, making my first full-stack application. From conceptualizing abstract server code to crafting the database structures and materializing a user interface.One of my primary challenges I counter was mastering state management and navigating component data flow. This required understanding React’s state management and the intricacies of passing data between components. Through dedicated study and hands-on practice, I gradually developed in these areas, enabling me to build robust and responsive user interfaces. Another significant issue was implementing user authorization and authentication mechanisms. Understanding the complexities of securing user data and managing access rights. However, with perseverance and guidance from my tutor. I dedicated myself to the relevant documentation. Whenever I encounter obstacles beyond my expertise, I seek assistance from my mentor. Additionally, I recognized the critical importance of optimizing API calls for efficient data retrieval and user experience. Balancing performance and functionality, I improved my approach to API integration and prioritizing responsiveness. Ultimately, I successfully navigated these challenges and emerged with a fully functional web application that stands as a testament to my growth and proficiency as a Web Developer. ',
+            },
         ],
     },
     {

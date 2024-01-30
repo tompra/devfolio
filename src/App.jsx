@@ -6,6 +6,7 @@ import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Modal from './components/Modal';
+import CaseStudy from './components/CaseStudy';
 import { useAppContext } from './context/context';
 
 const App = () => {
@@ -19,6 +20,8 @@ const App = () => {
         animateVisibility,
         handleClickOnItem,
         toggleModal,
+        isCaseStudyOpen,
+        toggleCaseStudy,
     } = useAppContext();
 
     return (
@@ -39,6 +42,7 @@ const App = () => {
             <Skills animateVisibility={animateVisibility} />
             <Projects
                 toggleModal={toggleModal}
+                toggleCaseStudy={toggleCaseStudy}
                 animateVisibility={animateVisibility}
             />
             <Contact animateVisibility={animateVisibility} />
@@ -46,6 +50,12 @@ const App = () => {
 
             {isModalOpen && (
                 <Modal toggleModal={toggleModal} modalContent={modalContent} />
+            )}
+            {isCaseStudyOpen && (
+                <CaseStudy
+                    toggleCaseStudy={toggleCaseStudy}
+                    modalContent={modalContent}
+                />
             )}
         </div>
     );

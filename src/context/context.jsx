@@ -8,6 +8,7 @@ export const AppProvider = ({ children }) => {
     const [isModalOpen, setModalOpen] = useState(false);
     const [modalContent, setModalContent] = useState(null);
     const [isOpen, setIsOpen] = useState(false);
+    const [isCaseStudyOpen, setCaseStudy] = useState(false);
 
     useEffect(() => {
         localStorage.setItem('darkMode', darkMode);
@@ -26,6 +27,11 @@ export const AppProvider = ({ children }) => {
         setModalOpen((isModalOpen) => !isModalOpen);
     };
 
+    const toggleCaseStudy = (content) => {
+        setModalContent(content);
+        setCaseStudy((isCaseStudyOpen) => !isCaseStudyOpen);
+    };
+
     const contextValues = {
         darkMode,
         setDarkMode,
@@ -38,6 +44,9 @@ export const AppProvider = ({ children }) => {
         animateVisibility,
         handleClickOnItem,
         toggleModal,
+        isCaseStudyOpen,
+        setCaseStudy,
+        toggleCaseStudy,
     };
 
     return (
