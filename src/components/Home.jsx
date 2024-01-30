@@ -8,7 +8,7 @@ const Home = () => {
     const { isOpen } = useAppContext();
     return (
         <section
-            className={`bg-sky-600 dark:bg-gray-700 align-element grid md:grid-cols-2  border-b-2 border-gray-400 dark:border-gray-500 py-16 animate-fade-right animate-once animate-duration-1000 animate-delay-500 animate-ease-in-out`}
+            className={`bg-sky-600 dark:bg-gray-700 align-element grid md:grid-cols-2 font-roboto border-b-2 border-gray-400 dark:border-gray-500 py-16 animate-fade-right animate-once animate-duration-1000 animate-delay-500 animate-ease-in-out`}
             id='home'
         >
             <article
@@ -26,7 +26,7 @@ const Home = () => {
                             return (
                                 <span
                                     key={index}
-                                    className={`inline-block tracking-widest cursor-pointer sm:hover:animate-wiggle-more sm:hover:animate-infinite sm:hover:animate-duration-[500ms] sm:hover:animate-delay-100 hover:sm:animate-ease-out`}
+                                    className={`inline-block tracking-widest cursor-pointer sm:hover:animate-wiggle-more sm:hover:animate-infinite sm:hover:animate-duration-[500ms] sm:hover:animate-delay-100 hover:sm:animate-ease-out hover:u`}
                                 >
                                     {letter}
                                 </span>

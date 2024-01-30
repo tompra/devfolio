@@ -22,7 +22,7 @@ const Projects = () => {
     return (
         <section
             ref={ref}
-            className='bg-white align-element xs:py-12 xs:p-4 dark:bg-gray-600'
+            className='bg-white align-element xs:py-12 xs:p-4 dark:bg-gray-600 font-roboto'
             id='projects'
         >
             <h1

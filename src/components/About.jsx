@@ -15,12 +15,12 @@ const About = () => {
 
     return (
         <section
-            className='bg-white align-element sm:py-20 border-b-2 border-gray-700 xs:py-12 dark:bg-gray-600 animate-fade-left animate-once animate-duration-1000 animate-delay-300 animate-ease-in-out'
+            className='bg-white align-element sm:py-20 border-b-2 border-gray-700 xs:py-12 dark:bg-gray-600 animate-fade-left animate-once animate-duration-1000 animate-delay-300 animate-ease-in-out font-roboto'
             id='about'
         >
             <div className='grid grid-cols-1 md:grid-cols-2 gap-3 xs:p-8 dark:text-white'>
                 <div className='md:order-2 xs:flex xs:flex-col xs:justify-center animate-fade-down animate-once animate-duration-1000 animate-delay-[800ms] animate-ease-in-out'>
-                    <h1 className='text-3xl font-bold xs:text-center sm:text-start xs:mb-5 sm:mb-3'>
+                    <h1 className='text-3xl font-bold xs:text-center sm:text-start xs:mb-5 sm:mb-3 font-mono'>
                         About me
                     </h1>
                     <p className='py-3 leading-7'>

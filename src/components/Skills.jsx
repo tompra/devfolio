@@ -18,7 +18,7 @@ const Skills = () => {
     return (
         <section
             ref={ref}
-            className='bg-slate-200 align-element sm:py-20 xs:py-12 xs:p-8 dark:bg-gray-800 dark:text-white'
+            className='bg-slate-200 align-element sm:py-20 xs:py-12 xs:p-8 dark:bg-gray-800 dark:text-white font-roboto'
             id='skills'
         >
             <div className={skillsAnimation}>

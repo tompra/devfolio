@@ -54,7 +54,7 @@ const Contact = () => {
     return (
         <section
             ref={ref}
-            className='bg-slate-200 dark:bg-gray-700 align-element py-16 grid grid-cols-1 md:grid-cols-2'
+            className='bg-slate-200 dark:bg-gray-700 align-element py-16 grid grid-cols-1 md:grid-cols-2 font-roboto'
             id='contact'
         >
             <div
