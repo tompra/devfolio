@@ -45,7 +45,7 @@ const App = () => {
             <Footer animateVisibility={animateVisibility} />
 
             {isModalOpen && (
-                <Modal toggleModal={toggleModal} content={modalContent} />
+                <Modal toggleModal={toggleModal} modalContent={modalContent} />
             )}
         </div>
     );

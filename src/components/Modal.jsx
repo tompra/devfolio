@@ -2,15 +2,15 @@ import PropTypes from 'prop-types';
 import { useAppContext } from '../context/context';
 
 const Modal = () => {
-    const { toggleModal, content } = useAppContext();
-    if (!content) {
+    const { toggleModal, isModalOpen, modalContent } = useAppContext();
+    if (!isModalOpen || !modalContent) {
         return null;
     }
     return (
         <div className='fixed inset-0 bg-gray-800 bg-opacity-75 flex items-center py-5 justify-center animate-fade animate-once animate-duration-200 animate-delay-0 animate-ease-in'>
             <div className='bg-white rounded-md relative w-full max-w-5xl h-full overflow-y-auto dark:bg-gray-600 dark:text-white'>
                 <div className='flex items-center justify-between p-4 md:py-5 border-b rounded-t dark:border-gray-600'>
-                    <h1 className='text-2xl font-bold'>{content.title}</h1>
+                    <h1 className='text-2xl font-bold'>{modalContent.title}</h1>
                     <button
                         type='button'
                         onClick={toggleModal}
@@ -36,19 +36,19 @@ const Modal = () => {
                 </div>
                 <div className='p-4 mt-2'>
                     <img
-                        src={content.img}
-                        alt={content.title}
+                        src={modalContent.img}
+                        alt={modalContent.title}
                         className='max-w-full'
                     />
                 </div>
                 <div className='p-4'>
                     <p className='font-bold text-xl py-2'>Description</p>{' '}
                     <p className='mb-3 font-normal my-1'>
-                        {content.description}
+                        {modalContent.description}
                     </p>
                     <p className='font-bold text-xl py-2'>User Stories</p>{' '}
                     <ul>
-                        {content.userStories.map((story, index) => {
+                        {modalContent.userStories.map((story, index) => {
                             return (
                                 <li key={index} className='my-1'>
                                     {story}
@@ -58,7 +58,7 @@ const Modal = () => {
                     </ul>
                     <p className='font-bold text-xl py-2'>Key Features</p>
                     <ul>
-                        {content.keyFeatures.map((feature, index) => {
+                        {modalContent.keyFeatures.map((feature, index) => {
                             return (
                                 <li key={index} className='my-1'>
                                     {feature}
@@ -67,7 +67,7 @@ const Modal = () => {
                         })}
                     </ul>
                     <p className='font-bold text-xl py-2'>Technologies</p>{' '}
-                    <p className='my-1'>{content.tools.join(', ')}</p>
+                    <p className='my-1'>{modalContent.tools.join(', ')}</p>
                 </div>
             </div>
         </div>

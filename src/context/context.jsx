@@ -23,7 +23,7 @@ export const AppProvider = ({ children }) => {
 
     const toggleModal = (content) => {
         setModalContent(content);
-        setModalOpen(!isModalOpen);
+        setModalOpen((isModalOpen) => !isModalOpen);
     };
 
     const contextValues = {
