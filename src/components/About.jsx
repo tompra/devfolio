@@ -20,7 +20,7 @@ const About = () => {
             id='about'
         >
             <div className='grid grid-cols-1 md:grid-cols-2 gap-3 xs:p-8 dark:text-white'>
-                <div className='md:order-2 xs:flex xs:flex-col xs:justify-center animate-fade-down animate-once animate-duration-1000 animate-delay-[800ms] animate-ease-in-out'>
+                <div className='md:order-2 xs:flex xs:flex-col xs:justify-center md:justify-start animate-fade-down animate-once animate-duration-1000 animate-delay-[800ms] animate-ease-in-out'>
                     <h1 className='text-3xl font-bold xs:text-center sm:text-start xs:mb-5 sm:mb-3 font-mono'>
                         About me
                     </h1>
@@ -70,20 +70,20 @@ const About = () => {
                             className='object-cover w-full h-full rounded-lg hover:opacity-95'
                         />
                     </div>
-                    <div className='flex justify-center gap-x-6 pt-10'>
+                    <div className='flex justify-center  pt-10'>
                         <button
                             onClick={downloadCV}
-                            className='xs:text-xs sm:text-sm  relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800'
+                            className=' relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800'
                         >
-                            <span className='relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0'>
-                                Download my CV
+                            <span className='xs:text-xs sm:text-base relative px-4 text-center xs:py-3.5 sm:py-2.5  transition-all ease-in duration-75  bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0'>
+                                Download CV
                             </span>
                         </button>
                         <a
                             href='#projects'
-                            className='xs:text-xs md:text-sm relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800'
+                            className='  relative inline-flex items-center justify-center p-0.5 mb-2 me-3 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800'
                         >
-                            <span className='relative px-5 text-center py-2.5 transition-all ease-in duration-75  bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0'>
+                            <span className='xs:text-xs sm:text-base relative px-4 text-center xs:py-3.5 sm:py-2.5 transition-all ease-in duration-75  bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0'>
                                 Check my work
                             </span>
                         </a>

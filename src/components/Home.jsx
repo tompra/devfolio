@@ -21,7 +21,7 @@ const Home = () => {
                 </h1>
                 <h1 className='text-3xl xs:text-center sm:text-start'>
                     I&apos;m{' '}
-                    <span className='text-slate-200 dark:text-sky-500 font-extrabold text-4xl'>
+                    <span className='font-robotoMono text-slate-200 dark:text-sky-500 font-extrabold text-4xl'>
                         {nameArr.map((letter, index) => {
                             return (
                                 <span
@@ -35,7 +35,7 @@ const Home = () => {
                     </span>
                     , a web developer.
                 </h1>
-                <p className='capitalize xs:text-center sm:text-start'>
+                <p className='pt-2 capitalize xs:text-center sm:text-start'>
                     scaling heights in code and on rocks
                 </p>
                 <div className='flex gap-x-4 mt-5 items-center xs:flex xs:justify-center sm:justify-start'>

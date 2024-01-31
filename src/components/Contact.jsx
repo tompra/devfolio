@@ -128,7 +128,7 @@ const Contact = () => {
                 </form>
             </div>
             <div
-                className={`bg-sky-700 py-3 xs:px-5 sm:px-5 md:px-0 rounded ${animateMap}`}
+                className={`bg-sky-700 py-3 xs:px-5 sm:px-5 md:px-0 mx-4 rounded ${animateMap}`}
             >
                 <Map />
             </div>
