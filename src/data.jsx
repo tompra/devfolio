@@ -307,7 +307,7 @@ export const projects = [
     {
         id: nanoid(),
         img: cinematixImage,
-        url: 'https://cinematix.netlify.app/login',
+        url: 'https://cinematix.netlify.app/',
         github: 'https://github.com/tompra/cinematix',
         title: 'Cinematix',
         text: 'Immerse in a yourself in this single-page, responsive web application with React for an application called PopcornHub. Create an account and navigate through this user-friendly interace application and discover more about movies.',
