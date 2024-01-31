@@ -3,12 +3,12 @@ import { futurePlanStack } from '../data';
 
 const About = () => {
     const downloadCV = () => {
-        fetch('cv.pdf').then((response) => {
+        fetch('CVThomasPrayon.pdf').then((response) => {
             response.blob().then((blob) => {
                 const fileURL = window.URL.createObjectURL(blob);
                 let anchorLink = document.createElement('a');
                 anchorLink.href = fileURL;
-                anchorLink.download = 'cv.pdf';
+                anchorLink.download = 'CVThomasPrayon.pdf';
                 anchorLink.click();
             });
         });
