@@ -207,6 +207,35 @@ export const projects = [
             'The single movie view will contain a button when clicked takes the user to the director view, where detials about the director of that particular movie will be displayed',
             'The single movie view will contain a button when clicked takes the user to the genre view, where detials about the genre of that particular movie will be displayed',
         ],
+        caseStudy: [
+            {
+                overview:
+                    'Filmify is a web application built with the MEAN stack (MongoDB, Express, Angular and Node,js) engineered to elevate the user experience. Integrating both backend and frontend components. On the front end, using Angular crafted functionalities such as login, registration, account management, and access to comprehensive movie details. The backend hosts a dynamic database with a vast collection of movies. This empowers users to curate their personal space within Filmify by adding favorite movies and updating profile details, including username, password, email and birthday. Filmify combines the latest tech with user-friendly design, offering a personalized cinematic experience.',
+                purpose:
+                    'I developed this personal project as part of a CareerFoundry course to specialize in full-stack web development, with a focus on Angular. The objective was to build a responsive and captivating web application that provides users with inspiration and comprehensive details about various movements. The challenge centered around creating a RESTful API from scratch, establishing and linking a database, and unleashing the power of Angular to craft interactive interfaces. The project aimed to serve as an example for my portfolio and familiarize me with standard project requisites such as user stories and user flows.',
+                duration:
+                    'Cinematix was crafted over the course of one month, a project that demanded significant time and attention. The complexity for mastering technologies like React Hooks, Redux and Context, required dedicated effort to ensure integration and functionality. ',
+                credits:
+                    'Filmify took approximately a month and a half of my time, much more than my expectations. Navigating through Angular and TypeScript, both were new technologies for me, which required dedicated effort and a learning curve. Immersing myself in understanding Angular’s mechanics and TypeScript.',
+                toolsFront: 'Angular, TypeScript, Angular-Material, SASS',
+                toolsBack:
+                    'Node.js, Express, MongoDB, Morgan, bodyParser, mongoose, CORS, Passport, bcrypt, Postman, OnRender.',
+
+                backend:
+                    'On the server side, I crafted a RESTful API using Node.js and Express, integrating with MongoDB, a non-relational database. The API’s HTTP endpoints leverage CRUD methods to efficiently retrieve movie and user data through standard HTTP requests, delivering results in JSON format. This integration is facilitated by Mongoose, ensuring through the business logic layer. Authentication and authorization are implemented through HTTP and JWT based protocols, an authorization JWT token is returned to the client. This process validates registered users and grants them Read, Delete, and Update permissions. While initially challenging, with persistence, mastering authorization mechanisms became clear. Prior to deployment, testing of API endpoints using API endpoints using Postman and documentation for a smooth deployment process. The RESTful API was successfully deployed using OnRender.',
+                frontend:
+                    'Similar to the React client, I developed another client accessing the same API and database, this time utilizing Angular. This is a single-page, responsive web application with mostly identical functionality. In this version upon registration/login, there is a display of all the movies. Modal windows can be opened from this view to display details about a specific movie, such as description, actors, genre, and director, as well as to edit the user profile. Transitioning to Angular was quite a journey. Unlike React, Angular is a comprehensive framework rather than just a library, offering a plethora of pre-defined structures and built-in functionalities. However, as I delved deeper into its basic structure, it gradually became more comprehensible, facilitating a swift recreation of the client with a similar layout.',
+                improvements: [
+                    'Enhance the user profile by integrating user photos and personalized recommendations based on liked movies.',
+                    'Improve the registration and profile editing forms: incorporate a secondary password input to confirm accuracy and prevent typos. Implement a username availability check to ensure uniqueness.',
+                    'Introduce a confirmation dialog prompt prior to account deletion for added security.',
+                    'Upgrade movie filtering capabilities with advanced options, allowing users to filter by genre, actor, and director.',
+                    'Integrate actor and director profiles, showcasing their respective filmography and the various movies they have been involved in.',
+                ],
+                conclusion:
+                    'Concluding the Filmify project, transitioning from server code to polished user interfaces has been a satisfying achievement. Exploring React and Angular provided valuable learning experiences, with Angular being a new learning curve. Despite its complexity compared to React, delving into Angula’s structured framework was enlightening. Adopting Material design principles added complexity but clarity to layout creation. While I’m still learning Angular, its organized structure and workflow are promising. Moving forward, the lessons from Filmofy will guide future projects. This journey highlights the importance of adaptability, continuous learning, and thoughtful tool selection for effective project realization.',
+            },
+        ],
     },
     {
         id: nanoid(),
