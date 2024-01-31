@@ -13,11 +13,8 @@ const Navbar = () => {
         <nav className='align-element sm:animate-fade-down sm:animate-once sm:animate-duration-1000 sm:animate-delay-100 sm:animate-ease-in-out font-roboto'>
             <div className='md:flex items-center justify-between bg-sky-600 dark:bg-gray-900 dark:xs:bg-gray-900 py-10'>
                 <div className='cursor-pointer flex items-center gap-1'>
-                    <h1 className='text-4xl tracking-wider xs:ml-4 sm:ml-8 animate-fade animate-once animate-duration-500 animate-delay-[1000ms] animate-ease-out hover:opacity-80 dark:text-white'>
-                        <span className='flex lg:hidden font-bebas'>⦿TP</span>
-                        <span className='hidden lg:flex font-bebas'>
-                            ⦿Thomas Prayon
-                        </span>
+                    <h1 className='text-4xl tracking-wider xs:ml-4 sm:ml-8 animate-fade animate-once animate-duration-500 animate-delay-[1000ms] animate-ease-out hover:opacity-80 dark:text-white font-bebas'>
+                        ⦿TP
                     </h1>
                 </div>
                 <div

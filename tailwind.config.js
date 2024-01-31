@@ -21,8 +21,9 @@ export default {
                 95: '95%',
             },
             fontFamily: {
-                roboto: ['"Roboto Mono"', ...defaultTheme.fontFamily.mono],
+                robotoMono: ['"Roboto Mono"', ...defaultTheme.fontFamily.mono],
                 bebas: ['"Bebas Neue"', ...defaultTheme.fontFamily.sans],
+                roboto: ['"Roboto"', ...defaultTheme.fontFamily.sans],
             },
         },
     },
