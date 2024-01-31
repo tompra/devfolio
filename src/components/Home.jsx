@@ -38,6 +38,13 @@ const Home = () => {
                 <p className='pt-2 capitalize xs:text-center sm:text-start'>
                     scaling heights in code and on rocks
                 </p>
+                <p className='pt-2 capitalize xs:text-center sm:text-start text-sm'>
+                    <span className='animate-pulse animate-duration-700 text-xs'>
+                        🟢
+                    </span>
+                    {'  '}
+                    Currently available for a full-time web developer role.
+                </p>
                 <div className='flex gap-x-4 mt-5 items-center xs:flex xs:justify-center sm:justify-start'>
                     <a
                         href='https://github.com/tompra'
@@ -54,14 +61,6 @@ const Home = () => {
                         rel='noreferrer'
                     >
                         <FaLinkedin className='h-10 w-10 text-slate-800 animate-fade animate-once animate-duration-1000 animate-delay-[1200ms] animate-ease-out hover:text-slate-600  dark:text-sky-200' />
-                    </a>
-                    <a
-                        href='https://medium.com/@tomprayon'
-                        className='hover:opacity-80'
-                        target='_blank'
-                        rel='noreferrer'
-                    >
-                        <FaMedium className='h-10 w-10 text-slate-800 animate-fade animate-once animate-duration-1000 animate-delay-[1300ms] animate-ease-out  hover:text-slate-600  dark:text-sky-200' />
                     </a>
                 </div>
             </article>
