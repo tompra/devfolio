@@ -19,6 +19,7 @@ export default {
             },
             width: {
                 95: '95%',
+                90: '90%',
             },
             fontFamily: {
                 bebas: ['"Bebas Neue"', ...defaultTheme.fontFamily.sans],

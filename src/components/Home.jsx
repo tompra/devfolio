@@ -24,11 +24,11 @@ const Home = () => {
     const { isOpen } = useAppContext();
     return (
         <section
-            className={`bg-sky-600 dark:bg-gray-700 align-element grid md:grid-cols-2 border-b-2 border-gray-400 dark:border-gray-500 py-12 animate-fade-right animate-once animate-duration-1000 animate-delay-500 animate-ease-in-out`}
+            className={`bg-sky-600  dark:bg-gray-700 align-element grid md:grid-cols-2 border-b-2 border-gray-400 dark:border-gray-500 py-12 animate-fade-right animate-once animate-duration-1000 animate-delay-500 animate-ease-in-out`}
             id='home'
         >
             <article
-                className={`xs:py-8 sm:ml-10 dark:text-white sm:z-0 animate-fade-right animate-once animate-duration-1000 animate-delay-1000 animate-ease-out font-lato ${
+                className={`xs:py-8  dark:text-white sm:z-0 animate-fade-right animate-once animate-duration-1000 animate-delay-1000 animate-ease-out font-lato xs:mx-3 ${
                     isOpen ? 'xs:-z-10' : ''
                 }`}
             >
@@ -51,7 +51,7 @@ const Home = () => {
                     </span>
                     , a certified full-stack web developer.
                 </h1>
-                <p className='pt-2  xs:text-center sm:text-start font-medium leading-7'>
+                <p className='pt-3  xs:text-center sm:text-start font-medium leading-7'>
                     I&apos;m a passionate human that enjoys communcating with
                     computers. My diverse background includes roles in marketing
                     adminstration, catering event organization, online
@@ -67,7 +67,7 @@ const Home = () => {
                     applications.
                 </p>
 
-                <p className='pt-2  xs:text-center sm:text-start font-medium'>
+                <p className='sm:pt-2 xs:pt-4   xs:text-center sm:text-start font-medium leading-7'>
                     Passionate about industries like{' '}
                     <strong>{formattedIndustries.join(', ')} </strong>.
                 </p>
@@ -90,15 +90,15 @@ const Home = () => {
                     </a>
                 </div>
             </article>
-            <article className='flex flex-col items-center justify-center animate-fade-left animate-once animate-duration-500 animate-delay-[800ms] animate-ease-in'>
-                <div className='xs:w-80 xs:h-80  md:w-80 md:h-96 rounded-2xl overflow-hidden  border-4 border-sky-500 shadow-[0_3px_10px_rgb(0,0,0,0.5)] hover:border-sky-400 transform hover:shadow-xl transition duration-300 '>
+            <article className='flex flex-col items-center justify-center animate-fade-left animate-once animate-duration-500 animate-delay-[800ms] animate-ease-in xs:mx-3'>
+                <div className='xs:w-90 xs:h-80  md:w-80 md:h-96 rounded-2xl overflow-hidden  border-4 border-sky-500 shadow-[0_3px_10px_rgb(0,0,0,0.5)] hover:border-sky-400 transform hover:shadow-xl transition duration-300 '>
                     <img
                         src={Img1}
                         alt='Photo of myself'
                         className='object-cover w-full h-full hover:opacity-90'
                     />
                 </div>
-                <div className='text-center  mt-3'>
+                <div className='text-center mt-3'>
                     <p className=' pt-2 capitalize xs:text-center sm:text-start text-sm font-semibold'>
                         <span className='animate-pulse animate-duration-700 text-xs'>
                             🟢
