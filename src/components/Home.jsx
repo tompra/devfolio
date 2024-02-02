@@ -1,4 +1,4 @@
-import { FaGithubSquare, FaLinkedin, FaMedium } from 'react-icons/fa';
+import { FaGithubSquare, FaLinkedin } from 'react-icons/fa';
 import Img1 from '../assets/photos/portrait.png';
 import PropTypes from 'prop-types';
 import { useAppContext } from '../context/context';
@@ -8,25 +8,25 @@ const Home = () => {
     const { isOpen } = useAppContext();
     return (
         <section
-            className={`bg-sky-600 dark:bg-gray-700 align-element grid md:grid-cols-2 font-roboto border-b-2 border-gray-400 dark:border-gray-500 py-16 animate-fade-right animate-once animate-duration-1000 animate-delay-500 animate-ease-in-out`}
+            className={`bg-sky-600 dark:bg-gray-700 align-element grid md:grid-cols-2 border-b-2 border-gray-400 dark:border-gray-500 py-16 animate-fade-right animate-once animate-duration-1000 animate-delay-500 animate-ease-in-out`}
             id='home'
         >
             <article
-                className={`xs:py-8 sm:ml-10 dark:text-white sm:z-0 animate-fade-right animate-once animate-duration-1000 animate-delay-1000 animate-ease-out ${
+                className={`xs:py-8 sm:ml-10 dark:text-white sm:z-0 animate-fade-right animate-once animate-duration-1000 animate-delay-1000 animate-ease-out font-lato ${
                     isOpen ? 'xs:-z-10' : ''
                 }`}
             >
-                <h1 className='text-2xl xs:text-center sm:text-start'>
+                <h1 className='text-2xl xs:text-center sm:text-start font-medium'>
                     Hello there,
                 </h1>
-                <h1 className='text-3xl xs:text-center sm:text-start'>
+                <h1 className='text-3xl xs:text-center sm:text-start font-semibold'>
                     I&apos;m{' '}
-                    <span className='font-robotoMono text-slate-200 dark:text-sky-500 font-extrabold text-4xl'>
+                    <span className='font-bold text-slate-200 dark:text-sky-500  text-4xl'>
                         {nameArr.map((letter, index) => {
                             return (
                                 <span
                                     key={index}
-                                    className={`inline-block tracking-widest cursor-pointer sm:hover:animate-wiggle-more sm:hover:animate-infinite sm:hover:animate-duration-[500ms] sm:hover:animate-delay-100 hover:sm:animate-ease-out hover:u`}
+                                    className={`inline-block tracking-widest cursor-pointer sm:hover:animate-wiggle-more sm:hover:animate-infinite sm:hover:animate-duration-[500ms] sm:hover:animate-delay-100 hover:sm:animate-ease-out `}
                                 >
                                     {letter}
                                 </span>
@@ -35,10 +35,10 @@ const Home = () => {
                     </span>
                     , a web developer.
                 </h1>
-                <p className='pt-2 capitalize xs:text-center sm:text-start'>
+                <p className='pt-2 capitalize xs:text-center sm:text-start font-medium'>
                     scaling heights in code and on rocks
                 </p>
-                <p className='pt-2 capitalize xs:text-center sm:text-start text-sm'>
+                <p className='pt-2 capitalize xs:text-center sm:text-start text-sm font-semibold'>
                     <span className='animate-pulse animate-duration-700 text-xs'>
                         🟢
                     </span>

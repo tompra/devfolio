@@ -24,12 +24,12 @@ const App = () => {
         toggleCaseStudy,
     } = useAppContext();
 
+    const isDarkModeOn = `min-h-screen ${darkMode ? 'dark' : ''} ${
+        darkMode ? 'bg-slate-800' : ''
+    }`;
+
     return (
-        <div
-            className={`min-h-screen ${darkMode ? 'dark' : ''} ${
-                darkMode ? 'bg-slate-800' : ''
-            }`}
-        >
+        <div className={isDarkModeOn}>
             <Navbar
                 darkMode={darkMode}
                 setDarkMode={setDarkMode}

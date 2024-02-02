@@ -7,7 +7,7 @@ const Modal = () => {
         return null;
     }
     return (
-        <div className='fixed inset-0 bg-gray-800 bg-opacity-75 font-roboto flex items-center py-5 justify-center animate-fade animate-once animate-duration-200 animate-delay-0 animate-ease-in'>
+        <div className='fixed inset-0 bg-gray-800 bg-opacity-75 font-lato flex items-center py-5 justify-center animate-fade animate-once animate-duration-200 animate-delay-0 animate-ease-in'>
             <div className='bg-white rounded-md relative w-full max-w-5xl h-full overflow-y-auto dark:bg-gray-600 dark:text-white'>
                 <div className='flex items-center justify-between p-4 md:py-5 border-b rounded-t dark:border-gray-600'>
                     <h1 className='text-2xl font-bold'>{modalContent.title}</h1>

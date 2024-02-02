@@ -25,7 +25,7 @@ const Toolbelt = () => {
                                     : ''
                             }`}
                         >
-                            <div className='rounded-lg bg-sky-700 shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)] flex flex-col h-full transform hover:scale-105 hover:shadow-none hover:hue-rotate-15 transition duration-300'>
+                            <div className='font-lato rounded-lg bg-sky-700 shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)] flex flex-col h-full transform hover:scale-105 hover:shadow-none hover:hue-rotate-15 transition duration-300'>
                                 <div className='h-20 w-full border-b-2 border-gray-500 bg-white rounded-t-lg flex justify-center items-center'>
                                     <h5 className=' text-black font-bold leading-none '>
                                         {title}

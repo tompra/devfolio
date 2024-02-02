@@ -16,15 +16,15 @@ const About = () => {
 
     return (
         <section
-            className='bg-white align-element sm:py-20 border-b-2 border-gray-700 xs:py-12 dark:bg-gray-600 animate-fade-left animate-once animate-duration-1000 animate-delay-300 animate-ease-in-out font-roboto'
+            className='bg-white align-element sm:py-20 border-b-2 border-gray-700 xs:py-12 dark:bg-gray-600 animate-fade-left animate-once animate-duration-1000 animate-delay-300 animate-ease-in-out font-lato'
             id='about'
         >
             <div className='grid grid-cols-1 md:grid-cols-2 gap-3 xs:p-8 dark:text-white'>
                 <div className='md:order-2 xs:flex xs:flex-col xs:justify-center md:justify-start animate-fade-down animate-once animate-duration-1000 animate-delay-[800ms] animate-ease-in-out'>
-                    <h1 className='text-3xl font-bold xs:text-center sm:text-start xs:mb-5 sm:mb-3 font-mono'>
+                    <h1 className='text-3xl xs:text-center sm:text-start xs:mb-5 sm:mb-3 font-lato font-bold'>
                         About me
                     </h1>
-                    <p className='py-3 leading-7'>
+                    <p className='py-3 leading-7 font-lato'>
                         Hi! I’m Thomas, a full-stack web developer with skills
                         cultivated throughout diverse experience in economics,
                         multimedia design, and even tattooing. Now I’m eagerly
@@ -90,10 +90,10 @@ const About = () => {
                     </div>
                     <div className='sm:flex sm:w-90 lg:w-96 animate-fade-up animate-once animate-duration-1000 animate-delay-[800ms] animate-ease-in-out'>
                         <div className='mt-5 sm:mt-10 p-5 rounded-lg shadow-[0_3px_10px_rgb(0,0,0,0.5)] bg-slate-200 dark:bg-slate-500'>
-                            <h1 className='text-2xl text-center'>
+                            <h1 className='text-2xl text-center font-bold'>
                                 Future Plans
                             </h1>
-                            <h1 className='text-xl text-center mt-2'>
+                            <h1 className='text-xl text-center mt-2 font-semibold'>
                                 Climbing Route Tracker
                             </h1>
                             <p className='sm:text-sm md:text-base my-5'>
@@ -102,7 +102,7 @@ const About = () => {
                                 climbing achievements, and discover new climbing
                                 spots.
                             </p>
-                            <p className='sm:text-base md:text-lg my-2 text-center'>
+                            <p className='sm:text-base md:text-lg my-2 text-center font-semibold'>
                                 Tech Stack
                             </p>
                             <ul className='flex flex-wrap justify-center'>
