@@ -5,10 +5,26 @@ import { useAppContext } from '../context/context';
 
 const Home = () => {
     const nameArr = ['T', 'h', 'o', 'm', 'a', 's'];
+    const industries = [
+        'Climbing',
+        'Design',
+        'Education',
+        'Productivity',
+        'Wellness',
+        'Sport',
+        ' Gastronomy',
+        'Sustainability',
+    ];
+    const formattedIndustries = industries.map((industry, index) => {
+        return index === industries.length - 1
+            ? `and ${industry}`
+            : `${industry}`;
+    });
+
     const { isOpen } = useAppContext();
     return (
         <section
-            className={`bg-sky-600 dark:bg-gray-700 align-element grid md:grid-cols-2 border-b-2 border-gray-400 dark:border-gray-500 py-16 animate-fade-right animate-once animate-duration-1000 animate-delay-500 animate-ease-in-out`}
+            className={`bg-sky-600 dark:bg-gray-700 align-element grid md:grid-cols-2 border-b-2 border-gray-400 dark:border-gray-500 py-12 animate-fade-right animate-once animate-duration-1000 animate-delay-500 animate-ease-in-out`}
             id='home'
         >
             <article
@@ -33,17 +49,27 @@ const Home = () => {
                             );
                         })}
                     </span>
-                    , a web developer.
+                    , a certified full-stack web developer.
                 </h1>
-                <p className='pt-2 capitalize xs:text-center sm:text-start font-medium'>
-                    scaling heights in code and on rocks
+                <p className='pt-2  xs:text-center sm:text-start font-medium leading-7'>
+                    I&apos;m a passionate human that enjoys communcating with
+                    computers. My diverse background includes roles in marketing
+                    adminstration, catering event organization, online
+                    supermarket operations, and event tattoo artistry as a
+                    hobby.
                 </p>
-                <p className='pt-2 capitalize xs:text-center sm:text-start text-sm font-semibold'>
-                    <span className='animate-pulse animate-duration-700 text-xs'>
-                        🟢
-                    </span>
-                    {'  '}
-                    Currently available for a full-time web developer role.
+                <p className='pt-2  xs:text-center sm:text-start font-medium leading-7'>
+                    My experience as a multimedia designer student, I bring a
+                    blend of design skills and technical proficiency to web
+                    development. Proficient in JavaScript, specializing in React
+                    for front-end and Node.js for backend, I excel at creating
+                    integrated, responsive and fully functional full-stack
+                    applications.
+                </p>
+
+                <p className='pt-2  xs:text-center sm:text-start font-medium'>
+                    Passionate about industries like{' '}
+                    <strong>{formattedIndustries.join(', ')} </strong>.
                 </p>
                 <div className='flex gap-x-4 mt-5 items-center xs:flex xs:justify-center sm:justify-start'>
                     <a
@@ -64,13 +90,22 @@ const Home = () => {
                     </a>
                 </div>
             </article>
-            <article className='flex justify-center animate-fade-left animate-once animate-duration-500 animate-delay-[800ms] animate-ease-in'>
-                <div className='xs:w-80 xs:h-80  md:w-80 md:h-80 overflow-hidden rounded-full border-4 border-sky-500 shadow-[0_3px_10px_rgb(0,0,0,0.5)] hover:border-sky-400 transform hover:shadow-xl transition duration-300 '>
+            <article className='flex flex-col items-center justify-center animate-fade-left animate-once animate-duration-500 animate-delay-[800ms] animate-ease-in'>
+                <div className='xs:w-80 xs:h-80  md:w-80 md:h-96 rounded-2xl overflow-hidden  border-4 border-sky-500 shadow-[0_3px_10px_rgb(0,0,0,0.5)] hover:border-sky-400 transform hover:shadow-xl transition duration-300 '>
                     <img
                         src={Img1}
                         alt='Photo of myself'
                         className='object-cover w-full h-full hover:opacity-90'
                     />
+                </div>
+                <div className='text-center  mt-3'>
+                    <p className=' pt-2 capitalize xs:text-center sm:text-start text-sm font-semibold'>
+                        <span className='animate-pulse animate-duration-700 text-xs'>
+                            🟢
+                        </span>
+                        {'  '}
+                        Currently seeking a full-time web developer role.
+                    </p>
                 </div>
             </article>
         </section>
