@@ -66,7 +66,15 @@ const Contact = () => {
                 <p className='my-5'>
                     I&apos;m interested in new opportunities - especially in
                     large projects. If you have a question or a request, just
-                    contact me using the form below.{' '}
+                    contact me using the form below. - or just send me an email
+                    to:{' '}
+                    <a
+                        href='mailto:tomprayon@gmail.com'
+                        className='underline font-semibold'
+                    >
+                        tomprayon@gmail.com
+                    </a>
+                    . I&apos;m open for remote, freelance and full time roles.
                 </p>
                 <form className='mx-auto space-y-4 my-10'>
                     <input
