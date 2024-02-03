@@ -28,7 +28,7 @@ const Home = () => {
             id='home'
         >
             <article
-                className={`xs:py-8  dark:text-white sm:z-0 animate-fade-right animate-once animate-duration-1000 animate-delay-1000 animate-ease-out font-lato xs:mx-3 ${
+                className={`xs:py-8  dark:text-white sm:z-0 animate-fade-right animate-once animate-duration-1000 animate-delay-1000 animate-ease-out font-lato xs:mx-4 sm:ml-8 ${
                     isOpen ? 'xs:-z-10' : ''
                 }`}
             >
@@ -90,7 +90,7 @@ const Home = () => {
                     </a>
                 </div>
             </article>
-            <article className='flex flex-col items-center justify-center animate-fade-left animate-once animate-duration-500 animate-delay-[800ms] animate-ease-in xs:mx-3'>
+            <article className='flex flex-col items-center justify-center animate-fade-left animate-once animate-duration-500 animate-delay-[800ms] animate-ease-in xs:mx-3 sm:mx-0 '>
                 <div className='xs:w-90 xs:h-80  md:w-80 md:h-96 rounded-2xl overflow-hidden  border-4 border-sky-500 shadow-[0_3px_10px_rgb(0,0,0,0.5)] hover:border-sky-400 transform hover:shadow-xl transition duration-300 '>
                     <img
                         src={Img1}
@@ -100,7 +100,7 @@ const Home = () => {
                 </div>
                 <div className='text-center mt-3'>
                     <p className=' pt-2 capitalize xs:text-center sm:text-start text-sm font-semibold'>
-                        <span className='animate-pulse animate-duration-700 text-xs'>
+                        <span className='animate-pulse animate-duration-700 text-xs dark:text-white'>
                             🟢
                         </span>
                         {'  '}
