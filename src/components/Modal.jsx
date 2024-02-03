@@ -7,7 +7,10 @@ const Modal = () => {
         return null;
     }
     return (
-        <div className='fixed inset-0 bg-gray-800 bg-opacity-75 font-lato flex items-center py-5 justify-center animate-fade animate-once animate-duration-200 animate-delay-0 animate-ease-in'>
+        <div
+            className='fixed inset-0 bg-gray-800 bg-opacity-75 font-lato flex items-center py-5 justify-center animate-fade animate-once animate-duration-200 animate-delay-0 animate-ease-in'
+            role='dialog'
+        >
             <div className='bg-white rounded-md relative w-full max-w-5xl h-full overflow-y-auto dark:bg-gray-600 dark:text-white'>
                 <div className='flex items-center justify-between p-4 md:py-5 border-b rounded-t dark:border-gray-600'>
                     <h1 className='text-2xl font-bold'>{modalContent.title}</h1>
@@ -15,6 +18,7 @@ const Modal = () => {
                         type='button'
                         onClick={toggleModal}
                         className='text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white'
+                        aria-label='Close modal'
                     >
                         <svg
                             className='w-3 h-3'
@@ -76,7 +80,7 @@ const Modal = () => {
 
 Modal.propTypes = {
     toggleModal: PropTypes.func.isRequired,
-    content: PropTypes.shape({
+    modalContent: PropTypes.shape({
         title: PropTypes.string.isRequired,
         img: PropTypes.string.isRequired,
         description: PropTypes.string.isRequired,

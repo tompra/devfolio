@@ -95,6 +95,7 @@ const Home = () => {
                         className='hover:opacity-80'
                         target='_blank'
                         rel='noreferrer'
+                        aria-label='Github Profile'
                     >
                         <FaGithubSquare className='h-10 w-10 text-slate-800 animate-fade animate-once animate-duration-1000 animate-delay-[1100ms] animate-ease-out hover:text-slate-600 dark:text-sky-200' />
                     </a>
@@ -103,6 +104,7 @@ const Home = () => {
                         className='hover:opacity-80'
                         target='_blank'
                         rel='noreferrer'
+                        aria-label='LinkedIn Profile'
                     >
                         <FaLinkedin className='h-10 w-10 text-slate-800 animate-fade animate-once animate-duration-1000 animate-delay-[1200ms] animate-ease-out hover:text-slate-600  dark:text-sky-200' />
                     </a>

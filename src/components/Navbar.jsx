@@ -20,6 +20,7 @@ const Navbar = () => {
                 <div
                     onClick={() => setIsOpen(!isOpen)}
                     className='absolute right-10  top-12 cursor-pointer md:hidden w-7 h-7 text-black dark:xs:text-white animate-fade animate-once animate-duration-300 animate-delay-300 animate-ease-in'
+                    aria-label={isOpen ? 'Close menu' : 'Open menu'}
                 >
                     {isOpen ? (
                         <IoCloseSharp className='h-7 w-7' />
@@ -33,6 +34,7 @@ const Navbar = () => {
                             ? `top-18 z-10 animate-fade-down animate-once animate-duration-500 animate-delay-300 animate-ease-in`
                             : 'top-[-490px]'
                     }`}
+                    role='menu'
                 >
                     {links.map((link) => {
                         const { id, href, text } = link;
@@ -40,6 +42,7 @@ const Navbar = () => {
                             <li
                                 key={id}
                                 className='md:ml-8 md:my-0 my-6 font-semibold xs:pl-10 md:pl-0 font-lato'
+                                role='menuitem'
                                 onClick={handleClickOnItem}
                             >
                                 <a
@@ -57,14 +60,16 @@ const Navbar = () => {
                                 onClick={() => {
                                     setDarkMode(!darkMode);
                                 }}
-                                className='cursor-pointer text-2xl hover:animate-pulse hover:text-white '
+                                className='cursor-pointer text-2xl hover:animate-pulse hover:text-white'
+                                aria-label='Enable light mode'
                             />
                         ) : (
                             <BsFillMoonStarsFill
                                 onClick={() => {
                                     setDarkMode(!darkMode);
                                 }}
-                                className='cursor-pointer text-2xl hover:animate-pulse hover:text-white '
+                                className='cursor-pointer text-2xl hover:animate-pulse hover:text-white'
+                                aria-label='Enable dark mode'
                             />
                         )}
                     </li>

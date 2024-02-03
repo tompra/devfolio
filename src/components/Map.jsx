@@ -13,7 +13,11 @@ const customIcon = new L.icon({
 const Map = () => {
     const position = [52.53621010143943, 13.433024435511214];
     return (
-        <div className='align-element relative w-full h-96 md:h-full max-h-96 md:max-h-full sm:w-80 md:w-full md:px-5 mx-auto'>
+        <div
+            className='align-element relative w-full h-96 md:h-full max-h-96 md:max-h-full sm:w-80 md:w-full md:px-5 mx-auto'
+            role='application'
+            aria-label='Map showing my location'
+        >
             <MapContainer
                 center={position}
                 zoom={13}
@@ -25,7 +29,9 @@ const Map = () => {
                     url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
                 />
                 <Marker position={position} icon={customIcon}>
-                    <Popup>Looking for new opportunities</Popup>
+                    <Popup aria-label='Information about the marker'>
+                        Looking for new opportunities
+                    </Popup>
                 </Marker>
             </MapContainer>
         </div>

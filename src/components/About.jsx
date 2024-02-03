@@ -62,33 +62,35 @@ const About = () => {
                         or explore my profiles on various platforms.
                     </p>
                 </div>
-                <div className='sm:flex sm:flex-col sm:justify-start sm:items-center h-full w-full pt-2 px-5'>
-                    <div className='xs:hidden sm:flex sm:w-90 sm:h-96 lg:w-96 rounded-xl shadow-[0_3px_10px_rgb(0,0,0,0.5)] border-4 border-sky-500 hover:shadow-none  animate-fade-up animate-once animate-duration-1000 animate-delay-[800ms] animate-ease-in-out'>
+                <div className='flex flex-col xs:items-center sm:justify-start h-full w-full xs:pt-2 sm:pt-0 px-5'>
+                    <div className='sm:w-72 sm:h-full xs:h-64 xs:w-64 md:w-full rounded-xl shadow-[0_3px_10px_rgb(0,0,0,0.5)] border-4 border-sky-500 hover:shadow-none animate-fade-up animate-once animate-duration-1000 animate-delay-[800ms] animate-ease-in-out'>
                         <img
                             src={Img2}
                             alt='Me climbing a boulder'
-                            className='object-cover w-full h-full rounded-lg hover:opacity-95'
+                            className='object-cover  w-full h-full rounded-lg hover:opacity-95'
                         />
                     </div>
-                    <div className='xs:flex xs:flex-col xs:items-center xs:gap-y-4 sm:flex sm:flex-row sm:justify-center  xs:py-5 sm:py-10'>
-                        <a
+                    <div className='xs:h-40 sm:h-64 xs:flex xs:flex-col xs:items-center xs:justify-center xs:gap-y-4 sm:flex sm:flex-row sm:justify-center sm:items-center xs:pt-5  sm:pt-10'>
+                        <button
                             onClick={downloadCV}
                             className='cursor-pointer relative inline-flex items-center justify-center p-0.5 mb-2 me-3 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800'
+                            role='button'
                         >
                             <span className=' relative px-4 text-center py-2.5 transition-all ease-in duration-75  bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0'>
                                 Download CV
                             </span>
-                        </a>
+                        </button>
                         <a
                             href='#projects'
                             className='cursor-pointer relative inline-flex items-center justify-center p-0.5 mb-2 me-3 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800'
+                            aria-label='Check my work'
                         >
                             <span className=' relative px-4 text-center py-2.5 transition-all ease-in duration-75  bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0'>
                                 Check my work
                             </span>
                         </a>
                     </div>
-                    <div className='sm:flex sm:w-90 lg:w-96 animate-fade-up animate-once animate-duration-1000 animate-delay-[800ms] animate-ease-in-out'>
+                    <div className='sm:flex sm:w-90 xs:w-64 lg:w-96 animate-fade-up animate-once animate-duration-1000 animate-delay-[800ms] animate-ease-in-out'>
                         <div className='mt-5 sm:mt-10 p-5 rounded-lg shadow-[0_3px_10px_rgb(0,0,0,0.5)] bg-slate-200 dark:bg-slate-500'>
                             <h1 className='text-2xl text-center font-bold'>
                                 Future Plans

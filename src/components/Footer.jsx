@@ -18,6 +18,7 @@ const Footer = () => {
         <footer
             ref={ref}
             className={`bg-white align-element py-4 dark:bg-gray-900 dark:text-white font-lato flex flex-col justify-around ${animateFooter}`}
+            role='content info'
         >
             <h1 className='sm:text-2xl font-bold text-center xs:text-xl'>
                 Let&apos;s connect

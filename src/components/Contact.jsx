@@ -85,6 +85,7 @@ const Contact = () => {
                         id='name'
                         value={formData.name}
                         onChange={handleInputForm}
+                        aria-label='Your name'
                         required
                         className='w-full rounded-md py-2.5 px-4 border text-sm outline-[#007bff]'
                     />
@@ -96,6 +97,7 @@ const Contact = () => {
                         id='email'
                         value={formData.email}
                         onChange={handleInputForm}
+                        aria-label='Your email'
                         required
                         className='w-full rounded-md py-2.5 px-4 border text-sm outline-[#007bff]'
                     />
@@ -105,6 +107,7 @@ const Contact = () => {
                         placeholder='Subject'
                         id='subject'
                         value={formData.subject}
+                        aria-label='Email subject'
                         onChange={handleInputForm}
                         className='w-full rounded-md py-2.5 px-4 border text-sm outline-[#007bff]'
                     />
@@ -113,6 +116,7 @@ const Contact = () => {
                         name='user_message'
                         rows='6'
                         id='email-body'
+                        aria-label='Your message'
                         value={formData.message}
                         onChange={handleInputForm}
                         required
@@ -122,6 +126,7 @@ const Contact = () => {
                         <button
                             onClick={handleSendEmail}
                             className='relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800'
+                            aria-label='Send message'
                             disabled={
                                 !formData.user_name ||
                                 !formData.user_email ||
