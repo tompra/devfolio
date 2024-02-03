@@ -28,7 +28,7 @@ const Home = () => {
             id='home'
         >
             <article
-                className={`xs:py-8  dark:text-white sm:z-0 animate-fade-right animate-once animate-duration-1000 animate-delay-1000 animate-ease-out font-lato xs:mx-4 sm:ml-8 ${
+                className={`xs:py-8 sm:py-0  dark:text-white sm:z-0 animate-fade-right animate-once animate-duration-1000 animate-delay-1000 animate-ease-out font-lato xs:mx-3 sm:ml-8 ${
                     isOpen ? 'xs:-z-10' : ''
                 }`}
             >
@@ -52,7 +52,7 @@ const Home = () => {
                     , a certified full-stack web developer.
                 </h1>
                 <p className='pt-3  xs:text-center sm:text-start font-medium leading-7'>
-                    I&apos;m a passionate human that enjoys communcating with
+                    I&apos;m a passionate human that enjoys communicating with
                     computers. My diverse background includes roles in marketing
                     adminstration, catering event organization, online
                     supermarket operations, and event tattoo artistry as a
@@ -71,6 +71,24 @@ const Home = () => {
                     Passionate about industries like{' '}
                     <strong>{formattedIndustries.join(', ')} </strong>.
                 </p>
+            </article>
+            <article className='flex flex-col items-center justify-start animate-fade-left animate-once animate-duration-500 animate-delay-[800ms] animate-ease-in xs:mx-3 sm:mx-0 '>
+                <div className='xs:w-90 xs:h-96  md:w-80 md:h-96 rounded-2xl overflow-hidden  border-4 border-sky-500 shadow-[0_3px_10px_rgb(0,0,0,0.5)] hover:border-sky-400 transform hover:shadow-xl transition duration-300 '>
+                    <img
+                        src={Img1}
+                        alt='Photo of myself'
+                        className='object-cover w-full h-full hover:opacity-90'
+                    />
+                </div>
+                <div className='flex justify-center mt-3'>
+                    <p className=' pt-2 capitalize xs:text-center sm:text-start text-sm font-semibold dark:text-white'>
+                        <span className='animate-pulse animate-duration-700 text-xs'>
+                            🟢
+                        </span>
+                        {'  '}
+                        Currently seeking a full-time web developer role.
+                    </p>
+                </div>
                 <div className='flex gap-x-4 mt-5 items-center xs:flex xs:justify-center sm:justify-start'>
                     <a
                         href='https://github.com/tompra'
@@ -88,24 +106,6 @@ const Home = () => {
                     >
                         <FaLinkedin className='h-10 w-10 text-slate-800 animate-fade animate-once animate-duration-1000 animate-delay-[1200ms] animate-ease-out hover:text-slate-600  dark:text-sky-200' />
                     </a>
-                </div>
-            </article>
-            <article className='flex flex-col items-center justify-center animate-fade-left animate-once animate-duration-500 animate-delay-[800ms] animate-ease-in xs:mx-3 sm:mx-0 '>
-                <div className='xs:w-90 xs:h-80  md:w-80 md:h-96 rounded-2xl overflow-hidden  border-4 border-sky-500 shadow-[0_3px_10px_rgb(0,0,0,0.5)] hover:border-sky-400 transform hover:shadow-xl transition duration-300 '>
-                    <img
-                        src={Img1}
-                        alt='Photo of myself'
-                        className='object-cover w-full h-full hover:opacity-90'
-                    />
-                </div>
-                <div className='text-center mt-3'>
-                    <p className=' pt-2 capitalize xs:text-center sm:text-start text-sm font-semibold'>
-                        <span className='animate-pulse animate-duration-700 text-xs dark:text-white'>
-                            🟢
-                        </span>
-                        {'  '}
-                        Currently seeking a full-time web developer role.
-                    </p>
                 </div>
             </article>
         </section>

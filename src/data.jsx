@@ -32,6 +32,7 @@ import {
     SiAwslambda,
     SiGmail,
 } from 'react-icons/si';
+
 import pokedexImage from './assets/proyects/pokedex.png';
 import popcornhubImage from './assets/proyects/popcornhub.png';
 import cinematixImage from './assets/proyects/cinematix.png';
