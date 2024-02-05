@@ -1,4 +1,4 @@
-import { projects } from '../data';
+import { projects } from '../dataProjects';
 import { useInView } from 'react-intersection-observer';
 import PropTypes from 'prop-types';
 import { useAppContext } from '../context/context';
@@ -54,7 +54,6 @@ const Projects = () => {
                                 </span>
                             );
                         });
-
                     return (
                         <div
                             key={id}
@@ -62,7 +61,7 @@ const Projects = () => {
                         >
                             <img
                                 className='rounded-t-lg w-full h-auto object-cover xs:hidden sm:flex'
-                                src={img}
+                                src={img[0]}
                                 alt={title}
                             />
 

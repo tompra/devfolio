@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import { useAppContext } from '../context/context';
+import SimpleImageSlider from 'react-simple-image-slider';
 
 const Modal = () => {
     const { toggleModal, isModalOpen, modalContent } = useAppContext();
@@ -38,12 +39,30 @@ const Modal = () => {
                         <span className='sr-only'>Close modal</span>
                     </button>
                 </div>
-                <div className='p-4 mt-2'>
-                    <img
-                        src={modalContent.img}
-                        alt={modalContent.title}
-                        className='max-w-full'
-                    />
+                <div className='mt-5'>
+                    <div className='flex justify-center w-full'>
+                        {modalContent.title === 'ChatApp' ? (
+                            <SimpleImageSlider
+                                width={365}
+                                height={812}
+                                images={modalContent.img.slice(1)}
+                                autoPlay={true}
+                                autoPlayDelay={3}
+                                showBullets={true}
+                                showNavs={true}
+                            />
+                        ) : (
+                            <SimpleImageSlider
+                                width={812}
+                                height={408}
+                                images={modalContent.img}
+                                autoPlay={true}
+                                autoPlayDelay={3}
+                                showBullets={true}
+                                showNavs={true}
+                            />
+                        )}
+                    </div>
                 </div>
                 <div className='p-4'>
                     <p className='font-bold text-xl py-2'>Description</p>{' '}
@@ -82,7 +101,7 @@ Modal.propTypes = {
     toggleModal: PropTypes.func.isRequired,
     modalContent: PropTypes.shape({
         title: PropTypes.string.isRequired,
-        img: PropTypes.string.isRequired,
+        img: PropTypes.array.isRequired,
         description: PropTypes.string.isRequired,
         userStories: PropTypes.arrayOf(PropTypes.string).isRequired,
         keyFeatures: PropTypes.arrayOf(PropTypes.string).isRequired,
