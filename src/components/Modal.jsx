@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import { useAppContext } from '../context/context';
-import SimpleImageSlider from 'react-simple-image-slider';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import { Carousel } from 'react-responsive-carousel';
 
 const Modal = () => {
     const { toggleModal, isModalOpen, modalContent } = useAppContext();
@@ -39,31 +40,43 @@ const Modal = () => {
                         <span className='sr-only'>Close modal</span>
                     </button>
                 </div>
-                <div className='mt-5'>
-                    <div className='flex justify-center w-full'>
-                        {modalContent.title === 'ChatApp' ? (
-                            <SimpleImageSlider
-                                width={365}
-                                height={812}
-                                images={modalContent.img.slice(1)}
-                                autoPlay={true}
-                                autoPlayDelay={3}
-                                showBullets={true}
-                                showNavs={true}
-                            />
-                        ) : (
-                            <SimpleImageSlider
-                                width={812}
-                                height={408}
-                                images={modalContent.img}
-                                autoPlay={true}
-                                autoPlayDelay={3}
-                                showBullets={true}
-                                showNavs={true}
-                            />
-                        )}
-                    </div>
+
+                <div className='mx-auto'>
+                    <Carousel
+                        autoPlay={true}
+                        showArrows={true}
+                        showIndicators={true}
+                        useKeyboardArrows={true}
+                        showThumbs={false}
+                        showStatus={false}
+                        infiniteLoop={true}
+                    >
+                        {modalContent.title === 'ChatApp'
+                            ? modalContent.img.slice(1).map((image, index) => {
+                                  return (
+                                      <div key={index}>
+                                          <img
+                                              className='mx-auto max-w-full h-96 object-contain'
+                                              src={image}
+                                              alt={modalContent.title}
+                                          />
+                                      </div>
+                                  );
+                              })
+                            : modalContent.img.map((image, index) => {
+                                  return (
+                                      <div key={index}>
+                                          <img
+                                              className='mx-auto w-full'
+                                              src={image}
+                                              alt={modalContent.title}
+                                          />
+                                      </div>
+                                  );
+                              })}
+                    </Carousel>
                 </div>
+
                 <div className='p-4'>
                     <p className='font-bold text-xl py-2'>Description</p>{' '}
                     <p className='mb-3 font-normal my-1'>
