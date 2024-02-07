@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import Img2 from '../assets/photos/climb.jpeg';
 import { futurePlanStack } from '../data';
 import { FaGithubSquare, FaLinkedin } from 'react-icons/fa';
@@ -14,6 +15,7 @@ const About = () => {
             });
         });
     };
+    const { t } = useTranslation();
 
     return (
         <section
@@ -23,63 +25,39 @@ const About = () => {
             <div className='grid grid-cols-1 md:grid-cols-2 gap-3 xs:p-8 dark:text-white'>
                 <div className='md:order-2 xs:flex xs:flex-col xs:justify-center md:justify-start animate-fade-down animate-once animate-duration-1000 animate-delay-[800ms] animate-ease-in-out'>
                     <h1 className='text-3xl xs:text-center sm:text-start xs:mb-5 sm:mb-3 font-lato font-bold'>
-                        About me
+                        {t('aboutTitle')}
                     </h1>
                     <p className='py-3 leading-7 font-lato'>
-                        Hey there, I’m Thomas, a full-stack web developer with a
-                        diverse background that complements my skill set. In my
-                        previous positions, I refined my problem-solving skills,
-                        especially through hands-on experience with low-code
-                        tools like Excel. Crafting bike reports and managing
-                        account sheets were just a couple of the challenges I
-                        tackled.
+                        {t('aboutParagraph1')}
                     </p>
                     <p className='py-3 leading-7'>
-                        <strong>Why coding?</strong> To me, coding represents
-                        endless possibilities. It’s about embracing challenges
-                        and continuous learning. The thrill of problem-solving
-                        and the satisfaction of seeing solutions come to life
-                        are what drive me. With each new project, I’ve pushed
-                        myself to learn and grow.
+                        <strong>{t('aboutWhyCoding')}</strong>{' '}
+                        {t('aboutParagraph2')}
                     </p>{' '}
                     <p className='py-3 leading-7'>
-                        <strong>Beyond interacting with computers,</strong> I’m
-                        passionate about gravity - climbing is my primary hobby
-                        but I also find joy in drawing, tattooing, yoga,
-                        cycling, and nature strolls. Movement, both physical and
-                        mental, fuels my drive.
+                        <strong>{t('aboutBeyond')}</strong>{' '}
+                        {t('aboutParagraph3')}
                     </p>{' '}
                     <p className='py-3 leading-7'>
-                        <strong>As a web developer,</strong> I strive to create
-                        responsive web apps with clean layouts that function
-                        seamlessly across all devices. I prioritize designing
-                        intuitive interfaces that are easy to navigate and
-                        accessible to all users, ensuring usability for
-                        everyone.
+                        <strong>{t('aboutAsDeveloper')}</strong>{' '}
+                        {t('aboutParagraph4')}
                     </p>
                     <p className='py-3 leading-7'>
-                        While my background may not scream ‘tech’, I eagerly
-                        embrace new technologies and documentation.{' '}
-                        <strong> I&apos;m seeking </strong> a role as a Junior
-                        Web Developer or collaboration opportunities in
-                        Climbing, Design, Education, Productivity, Wellness,
-                        Sport, Gastronomy, or Sustainability.
+                        {t('aboutParagraph5')}
+                        <strong> {t('aboutSeeking')}</strong>{' '}
+                        {t('aboutParagraph6')}
                     </p>
                     <p className='py-3 leading-7'>
-                        I&apos;m captivated by collaborative projects and
-                        problem-solving challenges, motivated by overcoming
-                        obstacles and continuous improvement. If you’re
-                        interested in collaborating, feel free to reach out
-                        through this{' '}
+                        {t('aboutParagraph7')}{' '}
                         <a
                             href='#contact'
                             className='text-sky-500 font-bold underline'
                         >
-                            form
+                            {t('aboutContact')}
                         </a>{' '}
-                        or explore my profiles on various platforms.{' '}
+                        {t('aboutParagraph8')}
                     </p>
-                    <strong> Let’s create something amazing together!</strong>
+                    <strong> {t('aboutLastSentence')}</strong>
                 </div>
                 <div className='flex flex-col xs:items-center sm:justify-between h-full w-full xs:pt-2 sm:pt-0 px-5'>
                     <div className=' xs:h-52 h-72 lg:h-96 xs:my-5 sm:my-0 rounded-xl shadow-[0_3px_10px_rgb(0,0,0,0.5)] border-4 border-sky-500 hover:shadow-none animate-fade-up animate-once animate-duration-1000 animate-delay-[800ms] animate-ease-in-out'>
@@ -93,16 +71,13 @@ const About = () => {
                     <div className='xs:w-95 sm:flex sm:w-90  lg:w-96 animate-fade-up animate-once animate-duration-1000 animate-delay-[800ms] animate-ease-in-out'>
                         <div className='mt-5 sm:mt-10 p-5 rounded-lg shadow-[0_3px_10px_rgb(0,0,0,0.5)] bg-slate-200 dark:bg-slate-500'>
                             <h1 className='text-2xl text-center font-bold'>
-                                Future Plans
+                                {t('aboutFutureTitle')}
                             </h1>
                             <h1 className='text-xl text-center mt-2 font-semibold'>
-                                Climbing Route Tracker
+                                {t('aboutFuturePlan')}
                             </h1>
                             <p className='sm:text-sm md:text-base my-5'>
-                                Create a web application that allows climbers to
-                                track and share their climbing routes, log their
-                                climbing achievements, and discover new climbing
-                                spots.
+                                {t('aboutFutureParagraph')}
                             </p>
                             <p className='sm:text-base md:text-lg my-2 text-center font-semibold'>
                                 Tech Stack
@@ -126,7 +101,7 @@ const About = () => {
                             role='button'
                         >
                             <span className=' relative px-4 text-center py-2.5 transition-all ease-in duration-75  bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0'>
-                                Download CV
+                                {t('aboutCVButton')}
                             </span>
                         </button>
                         <a
@@ -135,13 +110,13 @@ const About = () => {
                             aria-label='Check my work'
                         >
                             <span className=' relative px-4 text-center py-2.5 transition-all ease-in duration-75  bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0'>
-                                Check my work
+                                {t('aboutCheckWork')}
                             </span>
                         </a>
                     </div>
                     <div className='flex flex-col gap-x-4 mt-5 items-center xs:flex xs:justify-center sm:justify-start'>
                         <h1 className='text-xl xs:text-center sm:text-start xs:mb-5 sm:mb-3 font-lato font-bold'>
-                            Let&apos;s Connect{' '}
+                            {t('aboutConnectTitle')}
                         </h1>
                         <div className='flex'>
                             <a

@@ -33,14 +33,6 @@ import {
     SiGmail,
 } from 'react-icons/si';
 
-export const links = [
-    { id: nanoid(), href: '#home', text: 'home' },
-    { id: nanoid(), href: '#about', text: 'about' },
-    { id: nanoid(), href: '#skills', text: 'skills' },
-    { id: nanoid(), href: '#projects', text: 'projects' },
-    { id: nanoid(), href: '#contact', text: 'contact' },
-];
-
 export const skills = [
     {
         id: nanoid(),
@@ -292,4 +284,8 @@ export const futurePlanStack = [
         id: nanoid(),
         tool: <SiPostgresql className='xs:h-10 xs:w-10 sm:h-12 sm:w-12' />,
     },
+];
+export const languages = [
+    { label: '🇪🇸', code: 'es' },
+    { label: '🇬🇧', code: 'en' },
 ];

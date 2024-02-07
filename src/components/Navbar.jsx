@@ -1,14 +1,22 @@
 import { BsFillMoonStarsFill } from 'react-icons/bs';
-import { links } from '../data';
 import { HiMenuAlt1 } from 'react-icons/hi';
 import { IoCloseSharp } from 'react-icons/io5';
 import { IoSunnySharp } from 'react-icons/io5';
 import PropTypes from 'prop-types';
 import { useAppContext } from '../context/context';
+import { languages } from '../data';
+import { useTranslation } from 'react-i18next';
 
 const Navbar = () => {
     const { darkMode, setDarkMode, isOpen, setIsOpen, handleClickOnItem } =
         useAppContext();
+    const { i18n, t } = useTranslation();
+
+    const onChangeLang = (e) => {
+        const lang_code = e.target.value;
+        i18n.changeLanguage(lang_code);
+    };
+
     return (
         <nav className='align-element sm:animate-fade-down sm:animate-once sm:animate-duration-1000 sm:animate-delay-100 sm:animate-ease-in-out '>
             <div className='md:flex items-center justify-between bg-sky-600 dark:bg-gray-900 dark:xs:bg-gray-900 py-10'>
@@ -36,24 +44,67 @@ const Navbar = () => {
                     }`}
                     role='menu'
                 >
-                    {links.map((link) => {
-                        const { id, href, text } = link;
-                        return (
-                            <li
-                                key={id}
-                                className='md:ml-8 md:my-0 my-6 font-semibold xs:pl-10 md:pl-0 font-lato'
-                                role='menuitem'
-                                onClick={handleClickOnItem}
-                            >
-                                <a
-                                    href={href}
-                                    className='capitalize text-lg tracking-wider relative w-fit block after:block after:content-[""] after:absolute after:h-[3px] after:bg-white after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left hover:text-white dark:after:bg-sky-500 dark:hover:text-sky-500'
-                                >
-                                    <span>{text}</span>
-                                </a>
-                            </li>
-                        );
-                    })}
+                    <li
+                        className='md:ml-8 md:my-0 my-6 font-semibold xs:pl-10 md:pl-0 font-lato'
+                        role='menuitem'
+                        onClick={handleClickOnItem}
+                    >
+                        <a
+                            href='#home'
+                            className='capitalize text-lg tracking-wider relative w-fit block after:block after:content-[""] after:absolute after:h-[3px] after:bg-white after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left hover:text-white dark:after:bg-sky-500 dark:hover:text-sky-500'
+                        >
+                            <span>{t('navItem1')}</span>
+                        </a>
+                    </li>
+                    <li
+                        className='md:ml-8 md:my-0 my-6 font-semibold xs:pl-10 md:pl-0 font-lato'
+                        role='menuitem'
+                        onClick={handleClickOnItem}
+                    >
+                        <a
+                            href='#about'
+                            className='capitalize text-lg tracking-wider relative w-fit block after:block after:content-[""] after:absolute after:h-[3px] after:bg-white after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left hover:text-white dark:after:bg-sky-500 dark:hover:text-sky-500'
+                        >
+                            <span>{t('navItem2')}</span>
+                        </a>
+                    </li>
+                    <li
+                        className='md:ml-8 md:my-0 my-6 font-semibold xs:pl-10 md:pl-0 font-lato'
+                        role='menuitem'
+                        onClick={handleClickOnItem}
+                    >
+                        <a
+                            href='#skills'
+                            className='capitalize text-lg tracking-wider relative w-fit block after:block after:content-[""] after:absolute after:h-[3px] after:bg-white after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left hover:text-white dark:after:bg-sky-500 dark:hover:text-sky-500'
+                        >
+                            <span>{t('navItem3')}</span>
+                        </a>
+                    </li>
+                    <li
+                        className='md:ml-8 md:my-0 my-6 font-semibold xs:pl-10 md:pl-0 font-lato'
+                        role='menuitem'
+                        onClick={handleClickOnItem}
+                    >
+                        <a
+                            href='#projects'
+                            className='capitalize text-lg tracking-wider relative w-fit block after:block after:content-[""] after:absolute after:h-[3px] after:bg-white after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left hover:text-white dark:after:bg-sky-500 dark:hover:text-sky-500'
+                        >
+                            <span>{t('navItem4')}</span>
+                        </a>
+                    </li>
+                    <li
+                        className='md:ml-8 md:my-0 my-6 font-semibold xs:pl-10 md:pl-0 font-lato'
+                        role='menuitem'
+                        onClick={handleClickOnItem}
+                    >
+                        <a
+                            href='#contact'
+                            className='capitalize text-lg tracking-wider relative w-fit block after:block after:content-[""] after:absolute after:h-[3px] after:bg-white after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left hover:text-white dark:after:bg-sky-500 dark:hover:text-sky-500'
+                        >
+                            <span>{t('navItem5')}</span>
+                        </a>
+                    </li>
+
                     <li className='md:ml-5 xs:pl-10 md:pl-0 animate-fade animate-once animate-duration-300 animate-delay-300 animate-ease-in'>
                         {darkMode ? (
                             <IoSunnySharp
@@ -73,6 +124,18 @@ const Navbar = () => {
                             />
                         )}
                     </li>
+                    <select
+                        defaultValue={i18n.language}
+                        onChange={onChangeLang}
+                        className='bg-transparent md:ml-5 xs:pl-10 md:pl-0 animate-fade animate-once animate-duration-300 animate-delay-300 animate-ease-in'
+                        style={{ maxWidth: '100%' }}
+                    >
+                        {languages.map(({ code, label }) => (
+                            <option key={code} value={code}>
+                                {label}
+                            </option>
+                        ))}
+                    </select>
                 </ul>
             </div>
         </nav>

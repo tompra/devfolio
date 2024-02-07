@@ -3,12 +3,14 @@ import Toolbelt from './Toolbelt';
 import { useInView } from 'react-intersection-observer';
 import PropTypes from 'prop-types';
 import { useAppContext } from '../context/context';
+import { useTranslation } from 'react-i18next';
 
 const Skills = () => {
     const { animateVisibility } = useAppContext();
     const { ref, inView } = useInView({
         triggerOnce: true,
     });
+    const { t } = useTranslation();
 
     const skillsAnimation = animateVisibility(
         inView,
@@ -23,13 +25,9 @@ const Skills = () => {
         >
             <div className={skillsAnimation}>
                 <h1 className='text-3xl font-bold text-center sm:text-start'>
-                    Skills
+                    {t('skillsTitle')}
                 </h1>
-                <p className='py-5 leading-7'>
-                    I possess the ability to create websites and applications,
-                    starting from the conceptualization phase through the design
-                    of user interfaces and interactive components.{' '}
-                </p>
+                <p className='py-5 leading-7'>{t('skillsParagraph')}</p>
             </div>
             <Slider />
             <Toolbelt />

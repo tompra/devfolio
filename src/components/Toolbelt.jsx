@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import { toolbelt } from '../data';
 import { useInView } from 'react-intersection-observer';
 
@@ -5,12 +6,14 @@ const Toolbelt = () => {
     const { ref, inView } = useInView({
         triggerOnce: true,
     });
+    const { t } = useTranslation();
 
     return (
         <section ref={ref} className='w-full min-h-80 flex items-center'>
             <div className='container mx-auto flex flex-wrap items-start p-2'>
                 {toolbelt.map((tool, index) => {
                     const { id, title, items } = tool;
+                    const translatedTitle = t(title);
                     const leftToRightDelay = 300 * index;
                     const rightToLeftDelay =
                         300 * (toolbelt.length - 1 - index);
@@ -28,7 +31,7 @@ const Toolbelt = () => {
                             <div className='font-lato rounded-lg bg-sky-700 shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)] flex flex-col h-full transform hover:scale-105 hover:shadow-none hover:hue-rotate-15 transition duration-300'>
                                 <div className='h-20 w-full border-b-2 border-gray-500 bg-white rounded-t-lg flex justify-center items-center'>
                                     <h5 className=' text-black font-bold leading-none '>
-                                        {title}
+                                        {translatedTitle}
                                     </h5>
                                 </div>
                                 <div className='flex flex-col p-2 flex-1'>

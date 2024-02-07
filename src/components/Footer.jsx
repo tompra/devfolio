@@ -2,8 +2,10 @@ import { connectLogos } from '../data';
 import { useInView } from 'react-intersection-observer';
 import PropTypes from 'prop-types';
 import { useAppContext } from '../context/context';
+import { useTranslation } from 'react-i18next';
 
 const Footer = () => {
+    const { t } = useTranslation();
     const { animateVisibility } = useAppContext();
     const { ref, inView } = useInView({
         triggerOnce: true,
@@ -21,7 +23,7 @@ const Footer = () => {
             role='content info'
         >
             <h1 className='sm:text-2xl font-bold text-center xs:text-xl'>
-                Let&apos;s connect
+                {t('footerTitle')}
             </h1>
             <div className='flex flex-row justify-center my-5'>
                 {connectLogos.map((logos) => {

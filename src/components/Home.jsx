@@ -1,26 +1,13 @@
 import Img1 from '../assets/photos/portrait.png';
 import PropTypes from 'prop-types';
 import { useAppContext } from '../context/context';
+import { useTranslation } from 'react-i18next';
 
 const Home = () => {
     const nameArr = ['T', 'h', 'o', 'm', 'a', 's'];
-    const industries = [
-        'Climbing',
-        'Design',
-        'Education',
-        'Productivity',
-        'Wellness',
-        'Sport',
-        ' Gastronomy',
-        'Sustainability',
-    ];
-    const formattedIndustries = industries.map((industry, index) => {
-        return index === industries.length - 1
-            ? `and ${industry}`
-            : `${industry}`;
-    });
-
     const { isOpen } = useAppContext();
+    const { t } = useTranslation();
+
     return (
         <section
             className={`bg-sky-600  dark:bg-gray-700 align-element grid md:grid-cols-2 border-b-2 border-gray-400 dark:border-gray-500 py-12 animate-fade-right animate-once animate-duration-1000 animate-delay-500 animate-ease-in-out`}
@@ -32,10 +19,10 @@ const Home = () => {
                 }`}
             >
                 <h1 className='text-2xl xs:text-center sm:text-start font-medium'>
-                    Hello there,
+                    {t('homeTitle')}
                 </h1>
                 <h1 className='text-3xl xs:text-center sm:text-start font-semibold'>
-                    I&apos;m{' '}
+                    {t('homeSubTitle1')}
                     <span className='font-bold text-slate-200 dark:text-sky-500  text-4xl'>
                         {nameArr.map((letter, index) => {
                             return (
@@ -48,27 +35,23 @@ const Home = () => {
                             );
                         })}
                     </span>
-                    , a certified full-stack JavaScript web developer.
+                    {t('homeSubTitle2')}
                 </h1>
                 <p className='pt-3  xs:text-center sm:text-start font-medium leading-7'>
-                    I&apos;m a passionate human that enjoys communicating with
-                    computers. My diverse background includes roles in marketing
-                    adminstration, catering event organization, online
-                    supermarket operations, and event tattoo artistry as a
-                    hobby.
+                    {t('homeParagraph1')}
                 </p>
                 <p className='pt-2  xs:text-center sm:text-start font-medium leading-7'>
-                    My experience as a multimedia designer student, I bring a
-                    blend of design skills and technical proficiency to web
-                    development. Proficient in JavaScript, specializing in React
-                    for front-end and Node.js for backend, I excel at creating
-                    integrated, responsive and fully functional full-stack
-                    applications.
+                    {t('homeParagraph2')}
                 </p>
 
                 <p className='sm:pt-2 xs:pt-4   xs:text-center sm:text-start font-medium leading-7'>
-                    Passionate about industries like{' '}
-                    <strong>{formattedIndustries.join(', ')} </strong>.
+                    {t('homeIndustryText')}{' '}
+                    <strong>{t('homeIndustry1')}</strong>,{' '}
+                    <strong>{t('homeIndustry2')}</strong>,{' '}
+                    <strong>{t('homeIndustry3')}</strong>,{' '}
+                    <strong>{t('homeIndustry4')}</strong>,{' '}
+                    <strong>{t('homeIndustry5')}</strong>,{' '}
+                    <strong>{t('homeIndustry6')}</strong>.
                 </p>
             </article>
             <article className='flex flex-col items-center justify-around animate-fade-left animate-once animate-duration-500 animate-delay-[800ms] animate-ease-in xs:mx-3 sm:mx-0 '>
@@ -85,7 +68,7 @@ const Home = () => {
                             🟢
                         </span>
                         {'  '}
-                        Currently seeking a full-time web developer role.
+                        {t('homeMessage')}
                     </p>
                 </div>
             </article>

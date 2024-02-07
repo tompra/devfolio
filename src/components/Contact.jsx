@@ -6,8 +6,10 @@ import { ToastContainer, toast } from 'react-toastify';
 import { sendEmail } from '../sendEmail';
 import 'react-toastify/dist/ReactToastify.css';
 import { useAppContext } from '../context/context';
+import { useTranslation } from 'react-i18next';
 
 const Contact = () => {
+    const { t } = useTranslation();
     const { animateVisibility } = useAppContext();
     const [formData, setFormData] = useState({
         user_name: '',
@@ -61,26 +63,23 @@ const Contact = () => {
                 className={`px-8 mx-auto max-w-lg dark:text-white ${animateForm}`}
             >
                 <h1 className='text-3xl font-bold text-center sm:text-start'>
-                    Drop me a message
+                    {t('contactTitle')}
                 </h1>
                 <p className='my-5'>
-                    I&apos;m interested in new opportunities - especially in
-                    large projects. If you have a question or a request, just
-                    contact me using the form below. - or just send me an email
-                    to:{' '}
+                    {t('contactParagraph1')}
                     <a
                         href='mailto:tomprayon@gmail.com'
                         className='underline font-semibold'
                     >
                         tomprayon@gmail.com
                     </a>
-                    . I&apos;m open for remote, freelance and full time roles.
+                    {t('contactParagraph2')}
                 </p>
                 <form className='mx-auto space-y-4 my-10'>
                     <input
                         type='text'
                         name='user_name'
-                        placeholder='Name'
+                        placeholder={t('formName')}
                         autoComplete='none'
                         id='name'
                         value={formData.name}
@@ -92,7 +91,7 @@ const Contact = () => {
                     <input
                         type='email'
                         name='user_email'
-                        placeholder='Email'
+                        placeholder={t('formMail')}
                         autoComplete='none'
                         id='email'
                         value={formData.email}
@@ -104,7 +103,7 @@ const Contact = () => {
                     <input
                         type='text'
                         name='user_subject'
-                        placeholder='Subject'
+                        placeholder={t('formSubject')}
                         id='subject'
                         value={formData.subject}
                         aria-label='Email subject'
@@ -112,7 +111,7 @@ const Contact = () => {
                         className='w-full rounded-md py-2.5 px-4 border text-sm outline-[#007bff]'
                     />
                     <textarea
-                        placeholder='Message'
+                        placeholder={t('formMessage')}
                         name='user_message'
                         rows='6'
                         id='email-body'

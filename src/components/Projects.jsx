@@ -2,6 +2,7 @@ import { projects } from '../dataProjects';
 import { useInView } from 'react-intersection-observer';
 import PropTypes from 'prop-types';
 import { useAppContext } from '../context/context';
+import { useTranslation } from 'react-i18next';
 
 const Projects = () => {
     const { toggleModal, animateVisibility, toggleCaseStudy } = useAppContext();
@@ -19,6 +20,8 @@ const Projects = () => {
         'animate-fade-right animate-once animate-duration-300 animate-delay-0 animate-ease-in'
     );
 
+    const { t } = useTranslation();
+
     return (
         <section
             ref={ref}
@@ -28,7 +31,7 @@ const Projects = () => {
             <h1
                 className={`text-3xl font-bold text-center sm:text-start xs:text-center sm:pl-5 xs:py-5 dark:text-white ${animateTitle}`}
             >
-                Projects
+                {t('projectTitle')}
             </h1>
             <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
                 {projects.map((project) => {
@@ -38,7 +41,7 @@ const Projects = () => {
                         url,
                         github,
                         title,
-                        text,
+                        textKey,
                         tools,
                         caseStudy,
                     } = project;
@@ -71,7 +74,7 @@ const Projects = () => {
                                 </h1>
                                 <div className='my-5'>{toolList}</div>
                                 <p className='mb-3 font-normal text-gray-700 xs:text-sm sm:text-sm md:text-base dark:text-gray-400'>
-                                    {text}
+                                    {t(textKey)}
                                 </p>
                                 <div className='flex flex-wrap gap-3 xs:justify-center sm:justify-start '>
                                     <button
@@ -94,7 +97,7 @@ const Projects = () => {
                                         aria-label='See more about the project'
                                     >
                                         <span className='relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0'>
-                                            See more
+                                            {t('projectBtnMore')}
                                         </span>
                                     </button>
                                     <button
@@ -112,7 +115,7 @@ const Projects = () => {
                                                 rel='noopener noreferrer'
                                                 className='relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0'
                                             >
-                                                Website
+                                                {t('projectBtnWeb')}
                                             </a>
                                         ) : (
                                             <>
@@ -122,7 +125,7 @@ const Projects = () => {
                                                     rel='noopener noreferrer'
                                                     className='relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0'
                                                 >
-                                                    Discover & Build
+                                                    {t('projectBtnDiscover')}
                                                 </a>
                                             </>
                                         )}
@@ -136,7 +139,7 @@ const Projects = () => {
                                             aria-label='See case study'
                                         >
                                             <span className='relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0'>
-                                                Case Study
+                                                {t('projectBtnCase')}
                                             </span>
                                         </button>
                                     )}

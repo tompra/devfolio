@@ -2,8 +2,10 @@ import PropTypes from 'prop-types';
 import { useAppContext } from '../context/context';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { Carousel } from 'react-responsive-carousel';
+import { useTranslation } from 'react-i18next';
 
 const Modal = () => {
+    const { t } = useTranslation();
     const { toggleModal, isModalOpen, modalContent } = useAppContext();
     if (!isModalOpen || !modalContent) {
         return null;
@@ -78,7 +80,13 @@ const Modal = () => {
             />
         );
     };
+    const userStories = t(modalContent.userStories, {
+        returnObjects: true,
+    });
 
+    const keyFeatures = t(modalContent.keyFeatures, {
+        returnObjects: true,
+    });
     return (
         <div
             className='fixed inset-0 bg-gray-800 bg-opacity-75 font-lato flex items-center py-5 justify-center animate-fade animate-once animate-duration-200 animate-delay-0 animate-ease-in'
@@ -150,13 +158,15 @@ const Modal = () => {
                     </Carousel>
                 </div>
                 <div className='p-4'>
-                    <p className='font-bold text-xl py-2'>Description</p>{' '}
+                    <p className='font-bold text-xl py-2'>
+                        {t('descriptionModal')}
+                    </p>{' '}
                     <p className='mb-3 font-normal my-1'>
-                        {modalContent.description}
+                        {t(modalContent.descriptionKey)}
                     </p>
-                    <p className='font-bold text-xl py-2'>User Stories</p>{' '}
+                    <p className='font-bold text-xl py-2'>{t('userStories')}</p>{' '}
                     <ul className='list-disc ml-4'>
-                        {modalContent.userStories.map((story, index) => {
+                        {userStories.map((story, index) => {
                             return (
                                 <li key={index} className='my-1'>
                                     {story}
@@ -164,9 +174,9 @@ const Modal = () => {
                             );
                         })}
                     </ul>
-                    <p className='font-bold text-xl py-2'>Key Features</p>
+                    <p className='font-bold text-xl py-2'>{t('keyFeatures')}</p>
                     <ul className='list-disc ml-4'>
-                        {modalContent.keyFeatures.map((feature, index) => {
+                        {keyFeatures.map((feature, index) => {
                             return (
                                 <li key={index} className='my-1'>
                                     {feature}
@@ -174,7 +184,9 @@ const Modal = () => {
                             );
                         })}
                     </ul>
-                    <p className='font-bold text-xl py-2'>Technologies</p>{' '}
+                    <p className='font-bold text-xl py-2'>
+                        {t('technologies')}
+                    </p>{' '}
                     <p className='my-1'>{modalContent.tools.join(', ')}</p>
                 </div>
             </div>
