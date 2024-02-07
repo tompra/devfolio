@@ -141,14 +141,7 @@ export const projects = [
         ],
         descriptionKey: 'meetConnectDescription',
         userStories: 'meetConnectUserStories',
-        keyFeatures: [
-            'Filter events by city.',
-            'Show/hide event details.',
-            'Specify number of events.',
-            'Use the app when offline.',
-            'Add an app shortcut to the Home Screen.',
-            'Display chart visualizing event details.',
-        ],
+        keyFeatures: 'meetConnectKeyFeatures',
     },
     {
         id: nanoid(),
