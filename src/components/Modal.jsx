@@ -17,17 +17,17 @@ const Modal = () => {
         height: 30,
         cursor: 'pointer',
         fontSize: '15px',
-        backgroundColor: '#fff',
+        backgroundColor: '#D4DADF',
         borderRadius: '100%',
     };
     const indicatorStyles = {
         background: '#0761BB',
-        width: 8,
-        height: 8,
+        width: 12,
+        height: 12,
         display: 'inline-block',
         borderRadius: '100%',
-        margin: '0 8px',
-        color: '#7399BF',
+        margin: '-10px 8px',
+        color: '#D4DADF',
     };
 
     const renderArrowPrev = (onClickHandler, hasPrev, label) =>
@@ -111,7 +111,6 @@ const Modal = () => {
                         <span className='sr-only'>Close modal</span>
                     </button>
                 </div>
-
                 <div className='mx-auto w-90 '>
                     <Carousel
                         autoPlay={true}
@@ -150,7 +149,6 @@ const Modal = () => {
                               })}
                     </Carousel>
                 </div>
-
                 <div className='p-4'>
                     <p className='font-bold text-xl py-2'>Description</p>{' '}
                     <p className='mb-3 font-normal my-1'>

@@ -1,4 +1,3 @@
-import { FaGithubSquare, FaLinkedin } from 'react-icons/fa';
 import Img1 from '../assets/photos/portrait.png';
 import PropTypes from 'prop-types';
 import { useAppContext } from '../context/context';
@@ -72,7 +71,7 @@ const Home = () => {
                     <strong>{formattedIndustries.join(', ')} </strong>.
                 </p>
             </article>
-            <article className='flex flex-col items-center justify-start animate-fade-left animate-once animate-duration-500 animate-delay-[800ms] animate-ease-in xs:mx-3 sm:mx-0 '>
+            <article className='flex flex-col items-center justify-around animate-fade-left animate-once animate-duration-500 animate-delay-[800ms] animate-ease-in xs:mx-3 sm:mx-0 '>
                 <div className='xs:w-90 xs:h-96  md:w-80 md:h-96 rounded-2xl overflow-hidden  border-4 border-sky-500 shadow-[0_3px_10px_rgb(0,0,0,0.5)] hover:border-sky-400 transform hover:shadow-xl transition duration-300 '>
                     <img
                         src={Img1}
@@ -88,26 +87,6 @@ const Home = () => {
                         {'  '}
                         Currently seeking a full-time web developer role.
                     </p>
-                </div>
-                <div className='flex gap-x-4 mt-5 items-center xs:flex xs:justify-center sm:justify-start'>
-                    <a
-                        href='https://github.com/tompra'
-                        className='hover:opacity-80'
-                        target='_blank'
-                        rel='noreferrer'
-                        aria-label='Github Profile'
-                    >
-                        <FaGithubSquare className='h-10 w-10 text-slate-800 animate-fade animate-once animate-duration-1000 animate-delay-[1100ms] animate-ease-out hover:text-slate-600 dark:text-sky-200' />
-                    </a>
-                    <a
-                        href='https://www.linkedin.com/in/thom-prayon'
-                        className='hover:opacity-80'
-                        target='_blank'
-                        rel='noreferrer'
-                        aria-label='LinkedIn Profile'
-                    >
-                        <FaLinkedin className='h-10 w-10 text-slate-800 animate-fade animate-once animate-duration-1000 animate-delay-[1200ms] animate-ease-out hover:text-slate-600  dark:text-sky-200' />
-                    </a>
                 </div>
             </article>
         </section>
