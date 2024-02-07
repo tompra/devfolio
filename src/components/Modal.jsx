@@ -8,6 +8,77 @@ const Modal = () => {
     if (!isModalOpen || !modalContent) {
         return null;
     }
+
+    const arrowStyles = {
+        position: 'absolute',
+        zIndex: 2,
+        top: 'calc(50% - 15px)',
+        width: 30,
+        height: 30,
+        cursor: 'pointer',
+        fontSize: '15px',
+        backgroundColor: '#fff',
+        borderRadius: '100%',
+    };
+    const indicatorStyles = {
+        background: '#0761BB',
+        width: 8,
+        height: 8,
+        display: 'inline-block',
+        borderRadius: '100%',
+        margin: '0 8px',
+        color: '#7399BF',
+    };
+
+    const renderArrowPrev = (onClickHandler, hasPrev, label) =>
+        hasPrev && (
+            <button
+                type='button'
+                onClick={onClickHandler}
+                title={label}
+                style={{ ...arrowStyles, left: 15 }}
+            >
+                ←
+            </button>
+        );
+
+    const renderArrowNext = (onClickHandler, hasNext, label) =>
+        hasNext && (
+            <button
+                type='button'
+                onClick={onClickHandler}
+                title={label}
+                style={{ ...arrowStyles, right: 15 }}
+            >
+                →
+            </button>
+        );
+
+    const renderIndicator = (onClickHandler, isSelected, index, label) => {
+        if (isSelected) {
+            return (
+                <li
+                    style={{ ...indicatorStyles, background: '#fff' }}
+                    aria-label={`Selected: ${label} ${index + 1}`}
+                    title={`Selected: ${label} ${index + 1}`}
+                />
+            );
+        }
+        return (
+            <li
+                style={indicatorStyles}
+                onClick={onClickHandler}
+                onKeyDown={onClickHandler}
+                value={index}
+                key={index}
+                role='button'
+                tabIndex={0}
+                title={`${label} ${index + 1}`}
+                aria-label={`${label} ${index + 1}`}
+            />
+        );
+    };
+
     return (
         <div
             className='fixed inset-0 bg-gray-800 bg-opacity-75 font-lato flex items-center py-5 justify-center animate-fade animate-once animate-duration-200 animate-delay-0 animate-ease-in'
@@ -41,7 +112,7 @@ const Modal = () => {
                     </button>
                 </div>
 
-                <div className='mx-auto'>
+                <div className='mx-auto w-90 '>
                     <Carousel
                         autoPlay={true}
                         showArrows={true}
@@ -50,13 +121,16 @@ const Modal = () => {
                         showThumbs={false}
                         showStatus={false}
                         infiniteLoop={true}
+                        renderArrowNext={renderArrowNext}
+                        renderArrowPrev={renderArrowPrev}
+                        renderIndicator={renderIndicator}
                     >
                         {modalContent.title === 'ChatApp'
                             ? modalContent.img.slice(1).map((image, index) => {
                                   return (
                                       <div key={index}>
                                           <img
-                                              className='mx-auto max-w-full h-96 object-contain'
+                                              className='mx-auto w-full h-96 object-contain'
                                               src={image}
                                               alt={modalContent.title}
                                           />
@@ -67,7 +141,7 @@ const Modal = () => {
                                   return (
                                       <div key={index}>
                                           <img
-                                              className='mx-auto w-full'
+                                              className='mx-auto w-95'
                                               src={image}
                                               alt={modalContent.title}
                                           />

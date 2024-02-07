@@ -49,7 +49,7 @@ const Home = () => {
                             );
                         })}
                     </span>
-                    , a certified full-stack web developer.
+                    , a certified full-stack JavaScript web developer.
                 </h1>
                 <p className='pt-3  xs:text-center sm:text-start font-medium leading-7'>
                     I&apos;m a passionate human that enjoys communicating with
