@@ -127,8 +127,7 @@ const Navbar = () => {
                     <select
                         defaultValue={i18n.language}
                         onChange={onChangeLang}
-                        className='bg-transparent md:ml-5 xs:pl-10 md:pl-0 animate-fade animate-once animate-duration-300 animate-delay-300 animate-ease-in'
-                        style={{ maxWidth: '100%' }}
+                        className='bg-transparent md:ml-5 xs:pl-7 xs:m-2 md:pl-0 animate-fade animate-once animate-duration-300 animate-delay-300 animate-ease-in'
                     >
                         {languages.map(({ code, label }) => (
                             <option key={code} value={code}>
