@@ -1,13 +1,21 @@
 # Personal Portofolio
 
-![Screenshot 2024-02-08 at 11 41 58](https://github.com/tompra/devfolio/assets/143709419/be666bb9-57f4-4eec-8667-edbf7f3ef7e0)
-![Screenshot 2024-02-08 at 11 45 03](https://github.com/tompra/devfolio/assets/143709419/e56ed0f4-91bd-409a-88a9-ad8a9098f146)
-
 ## Project description
 
 The goal of this project was to develop a responsive website portfolio using a modern tech stack, including React, TailwindCSS, Vite, React Intersection Observer, Emailjs, and i18n. 
 
+![Screenshot 2024-02-08 at 11 41 58](https://github.com/tompra/devfolio/assets/143709419/be666bb9-57f4-4eec-8667-edbf7f3ef7e0)
+
+![Screenshot 2024-02-08 at 11 45 03](https://github.com/tompra/devfolio/assets/143709419/e56ed0f4-91bd-409a-88a9-ad8a9098f146)
+
 ## Technologies
+
+| Technology | Description | 
+|----------|----------|
+| React,   | The core library for building the user interface.,| 
+| TailwindCSS,   | A utility-first CSS framework for styling.,| 
+| Vite,   | A fast and efficient JavaScript build tool,|
+
 - React: The core library for building the user interface.
 - TailwindCSS: A utility-first CSS framework for styling.
 - Vite: A fast and efficient JavaScript build tool.
@@ -32,4 +40,4 @@ The goal of this project was to develop a responsive website portfolio using a m
 - Interactive map pinpointing my location in Berlin, Germany.
 
 ## Link to project
-[Portfolio]((https://tomprayondev.netlify.app/))
+[Portfolio](https://tomprayondev.netlify.app/)
