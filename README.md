@@ -12,20 +12,16 @@ The goal of this project was to develop a responsive website portfolio using a m
 
 | Technology | Description | 
 |----------|----------|
-| React,   | The core library for building the user interface.,| 
-| TailwindCSS,   | A utility-first CSS framework for styling.,| 
-| Vite,   | A fast and efficient JavaScript build tool,|
-
-- React: The core library for building the user interface.
-- TailwindCSS: A utility-first CSS framework for styling.
-- Vite: A fast and efficient JavaScript build tool.
-- React Icons: A library providing popular icons for React projects.
-- React Toastify: Used for displaying success and error messages.
-- TailwindCSS Animations: Adding subtle animations for a more interactive user experience.
-- React Intersection Observer: Utilized for triggering animations as elements come into view.
-- Emailjs: Integrated for sending emails directly from the contact form.
-- Leaflet: Used to display a map showcasing my location in Berlin, Germany.
-- i18n: Used to translate the original language to Spanish.
+| React   | The core library for building the user interface.| 
+| TailwindCSS   | A utility-first CSS framework for styling.| 
+| Vite   | A fast and efficient JavaScript build tool.|
+| React Icons   | A library providing popular icons for React projects|
+| React Toastify   | Used for displaying success and error messages.|
+| TailwindCSS Animations   | Adding subtle animations for a more interactive user experience.|
+| React Intersection Observer   | Utilized for triggering animations as elements come into view.|
+| Emailjs   | Integrated for sending emails directly from the contact form.|
+| Leaflet   | Used to display a map showcasing my location in Berlin, Germany.|
+| i18n   | Used to translate the original language to Spanish.|
 
 
 ## Key features
