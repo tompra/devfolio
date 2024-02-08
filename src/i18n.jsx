@@ -265,10 +265,11 @@ i18n.use(initReactI18next).init({
                 contactParagraph2:
                     '. I’m open for remote, freelance and full time roles.',
                 footerTitle: 'Let’s connect',
-                nameForm: 'Name',
+                formName: 'Name',
                 formMail: 'Email',
                 formSubject: 'Subject',
                 formMessage: 'Message',
+                formBtnSend: 'Send',
             },
         },
         es: {
@@ -311,7 +312,7 @@ i18n.use(initReactI18next).init({
                     'Aunque mi formación no sea "tecnológica", acepto con entusiasmo las nuevas tecnologías y la documentación.',
                 aboutSeeking: 'Estoy buscando',
                 aboutParagraph6:
-                    'a role as a Junior Web Developer or collaboration opportunities in Climbing, Design, Education, Productivity, Wellness, Sport, Gastronomy, or Sustainability.',
+                    'un puesto de Desarrollador Web Junior u oportunidades de colaboración en Escalada, Diseño, Educación, Productividad, Bienestar, Deporte, Gastronomía o Sostenibilidad.',
                 aboutParagraph7:
                     'Me cautivan los proyectos colaborativos y los retos de resolución de problemas, me motiva la superación de obstáculos y la mejora continua. Si estás interesado en colaborar, no dudes en ponerte en contacto conmigo a través de este',
                 aboutContact: 'formulario',
@@ -530,6 +531,7 @@ i18n.use(initReactI18next).init({
                 formMail: 'Mail',
                 formSubject: 'Tema',
                 formMessage: 'Mensaje',
+                formBtnSend: 'Enviar',
             },
         },
     },

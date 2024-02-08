@@ -66,7 +66,7 @@ const Contact = () => {
                     {t('contactTitle')}
                 </h1>
                 <p className='my-5'>
-                    {t('contactParagraph1')}
+                    {t('contactParagraph1')}{' '}
                     <a
                         href='mailto:tomprayon@gmail.com'
                         className='underline font-semibold'
@@ -133,7 +133,7 @@ const Contact = () => {
                             }
                         >
                             <span className='relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0'>
-                                Send
+                                {t('formBtnSend')}
                             </span>
                         </button>
                     </div>
